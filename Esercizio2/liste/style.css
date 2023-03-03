@@ -1,0 +1,71 @@
+#list1 {
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+#list1 li {
+    padding: 0.2rem;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#list1 li:nth-child(1){
+    background-color: aqua;
+}
+
+#list1 li:nth-child(2){
+    background-color: rgb(107, 133, 250);
+}
+
+#list1 li:nth-child(3){
+    background-color: rgb(56, 90, 243);
+}
+
+#list2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+
+#list2 li:nth-child(odd){
+    border-style: groove;
+    width: 20%;
+    background-color: bisque;
+}
+
+#list2 li:nth-child(even){
+    border-style: double;
+    width: 20%;
+    background-color: rgb(204, 134, 48);
+}
+
+#list3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#list3 li:nth-child(1){
+display: inline-block;
+text-align: center;
+padding: 0.2rem;
+background-color: rgb(138, 247, 14);
+border-style: dashed;
+}
+
+#list3 li:nth-child(even){
+    display: inline-block;
+    text-align: center;
+    padding: 0.2rem;
+    background-color: rgb(231, 255, 14);
+    border-radius: 20px;
+    }
+
+#list3 li:nth-child(3){
+border-style: dotted;
+background-color: gray;
+}
+
+#list3 li:nth-child(5){
+    border-style: outset;
+    background-color: rgb(250, 7, 7);
+    width: 20%;
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&display=swap');
+
+html{
+    font-family: 'Inter', sans-serif;
+    font-size:16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    text-align: center;
+    background-color: #1e5280;
+    color: white;
+    padding: 1rem 0;
+}
+
+#title h1 {
+    margin: 0;
+}
+
+#page-header{
+    background-color: rgb(64, 126, 155);
+}
+
+#page-header nav {  
+    background-color: #adadad;
+    padding: 1rem;
+}
+
+#page-header nav ul{
+background-color: red;
+list-style-type: none;
+width:520px;
+font-size: 0;
+padding: 0;
+margin: auto;
+}
+
+#page-header nav ul li{
+    display: inline-block;
+    width: 130px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: blue;
+}
+
+#page-header nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem 0.3rem;
+}
+#page-header nav ul li a:hover{
+    background-color: red;
+}
+
+img{
+    border-radius: 50%;
+}
+
+.image-container{
+    text-align: center;
+    background-image: url(logo.jpg);
+    background-size: cover;
+}
+

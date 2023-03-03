@@ -1,0 +1,45 @@
+main {
+    font-family: Arial;
+    background: #5a58df;
+  }
+body{
+  background-color: gray;
+}
+.navbar{
+     background-color: red; 
+  }
+
+  p{
+    text-decoration: none;
+  }
+  
+  footer{
+    background-color: aqua;
+  }
+
+  li{
+   color: white;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+ .imm-container{
+  text-align: center;
+  }
+
+  .best {
+    background-color: #aaa;
+    width: 100%;
+  }
+
+  .conatiner{
+      background-color: #aaa;
+      width: 100%;
+  }
