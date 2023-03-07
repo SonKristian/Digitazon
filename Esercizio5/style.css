@@ -4,10 +4,6 @@ html{
     border: 2px solid black;
 }
 
-body{
-  
-}
-
 * {
     box-sizing: border-box;
 }
@@ -39,7 +35,7 @@ header::after{
 
 .box{
     border: 1px solid black;
-    margin: 2rem 2rem;
+    margin: 2rem;
 }
 
 header .header-left,
