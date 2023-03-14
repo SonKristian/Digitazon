@@ -35,9 +35,9 @@
         <div class="cart">
           <a href=" "><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-        <div class="account-container">
+        <!-- <div class="account-container">
           <img id="account" src="download.jpg" />
-        </div>
+        </div> -->
       </nav>
       <nav id="header-down">
         <ul id="submenu">
@@ -55,20 +55,19 @@
         </ul>
       </nav>
     </header>
-
     <main>
-      <form action=" " method="get">
+      <form action="https://lazys.requestcatcher.com/">
         <div>
-          <label>Inserisci username/email</label>
-          <input type="text" required placeholder="Antonino Cannavacciuolo" />
+          <label for="user">Inserisci username/email</label>
+          <input name="user" id="user" value="Micheal Jackson" type="text" required placeholder="Antonino Cannavacciuolo" />
         </div>
-        <label>Inserisci password</label>
-        <input type="password" required />
-      </form>
+        <label for="pass">Inserisci password</label>
+        <input name="pass" id="pass" value="migliorpass" type="password" required />
       <button>Login</button>
-      <a href="homepage.html">
+      <a href="logged-home.html">
         <button>Homepage</button>
       </a>
+    </form>
     </main>
   </body>
 </html>

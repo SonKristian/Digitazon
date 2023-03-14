@@ -35,9 +35,9 @@
         <div class="cart">
           <a href=" "><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
-        <div class="account-container">
+        <!-- <div class="account-container">
           <img id="account" src="download.jpg" />
-        </div>
+        </div> -->
       </nav>
       <nav id="header-down">
         <ul id="submenu">
@@ -56,39 +56,44 @@
       </nav>
     </header>
     <main>
-      <form action=" " method="get">
+      <form action="https://lazys.requestcatcher.com/">
         <div>
-          <label>Inserisci Nome</label>
-          <input type="text" required placeholder="Antonino" />
+          <label for="name">Inserisci Nome</label>
+          <input name="name" id="name" value="Micheal" type="text" required placeholder="Antonino" />
         </div>
         <div>
-          <label>Inserisci Cognome</label>
-          <input type="text" required placeholder="Cannavacciuolo" />
+          <label for="surname">Inserisci Cognome</label>
+          <input name="surname" id="surname" value="Jackson" type="text" required placeholder="Cannavacciuolo" />
         </div>
         <div>
-          <label>Inserisci email</label>
-          <input
+          <label for="email">Inserisci email</label>
+          <input name="email" id="email" value="michealjackson@napoli.com"
             type="email"
             required
             pattern=".+@napoli\.com"
             placeholder="antoninocannavacciuolo@napoli.com"
           />
         </div>
-        <label>Inserisci indirizzo</label>
-        <input
+        <label for="address">Inserisci indirizzo</label>
+        <input  name="address" id="address" value="Bowmont Drive, 2300 Jackson Street"
           type="text"
           required
           placeholder="Vico Equense, via Napoli 120"
         />
         <div>
-          <label>Inserisci password</label>
-          <input type="password" required />
+          <label for="pass">Inserisci password</label>
+          <input name="pass" id="pass" value="migliorpass" type="password" required />
         </div>
-      </form>
+        <div>
       <button>Register</button>
-      <a href="homepage.html">
+    </form>
+      <a href="logged-home.html">
         <button>Homepage</button>
       </a>
+      <a href="login.html">
+        <button>Login</button>
+      </a>
+    </div>
     </main>
   </body>
 </html>
