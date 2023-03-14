@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightgray;
+}
+
+main{
+    display: flex;  
+    flex-flow: column wrap;
+}
+main > div:last-child{
+    background-color: rgb(183, 192, 205);
+    padding-left: 6rem;
+    padding-right: 6rem;
+ }
+/* sezione sinistra*/
+main > div:first-child{
+    background-color: aliceblue;
+ }
+ /* sezione sx contents*/
+main div section{
+    margin: 2rem;
+}
+
+.create-post{
+    display: flex;
+    justify-content:space-around;
+}
+.create-post div{
+    border: 1px solid rgba(0, 0, 0, 0.547);
+    height: 10rem;
+    width: 16rem;
+    background-image: url("https://esports.gazzetta.it/wp-content/uploads/2022/05/14/28/Apex-Legends-Mobile.jpg");
+    background-size:cover;
+    color: aliceblue;
+    font-weight: bold;
+    border-radius: 9px;
+    /* box-shadow: 2px 1px 10px black;  ombra esterna */ 
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.image-logo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 0 0 1rem;
+}
+
+.list{
+    display: flex;
+    gap: 4rem;
+
+}
+
+#first-list, #second-list{
+    list-style-type: none;
+    display: flex;
+    gap: 7rem;
+
+}
+
+.account{
+    margin-left: auto;
+}
+
+.image-logo img{
+    width: 100px;
+}
+
+.create-post{
+    background-color: white;
+    display: flex;
+    width: 400px;
+    margin :1rem;
+}
+
+.sections{
+    margin :1rem;
+    display: flex;
+    background-color: white;
+    width:400px;
+
+}
+
+.post{
+margin :1rem;
+background-color: white;
+display: flex;
+width: 300px;
+} 
+
+.post img{
+    width: 200px;
+
+}
+.section p{
+    width: fit-content;
+}
+
+.premium{
+    display: flex;
+    justify-content: flex-end;
+}

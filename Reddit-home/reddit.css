@@ -1,0 +1,250 @@
+/* START set page */
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    margin:0;
+}
+/* END set page */
+
+/* START MENU nav */
+nav {
+    height: 3rem;
+    background-color: rgb(245, 251, 251);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid rgba(187, 187, 187, 0.442);
+}
+
+nav div{
+    display: flex;
+}
+
+/* div brand */
+nav div:first-child{
+    flex-grow: 1;
+}
+
+/* div search */
+nav div:nth-child(2){
+    flex-grow: 8;
+    background-color: rgba(215, 215, 215, 0.356);
+    border-radius: 20px;
+    margin: 0 15rem;
+}
+
+nav div:nth-child(2):hover{
+    border: 1px solid blue;
+    background-color: rgb(245, 251, 251);
+}
+
+/* div bottoni + login*/
+nav div:last-child{
+    flex-grow: 1;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+/* brand img */
+nav div:first-child img{
+    width: 100px;
+}
+
+/*searchbar */
+#searchBar{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    width: 80%;
+    outline:none; /* per rimuovere il bordo del focus*/
+}
+
+nav div:nth-child(2) img{
+    opacity: 40%;
+    margin:10px;
+}
+
+nav button:hover:not(#login){
+   opacity: 35%;
+}
+
+/* bottoni nav */
+nav button { 
+    width: 100px;
+    border: 1px solid rgb(60, 91, 192);
+    border-radius: 100px;
+    font-weight: bold;
+    color:  rgb(60, 91, 192);
+}
+
+nav button:nth-child(2){
+    background-color:rgb(60, 91, 192);
+    color: aliceblue;
+}
+
+/* bottone login */
+#login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    border:none;
+    background-color: rgb(245, 251, 251);
+}
+
+/* login button icon */
+#login span:nth-child(1) img{
+    width:30px;
+    padding:10px 1px;
+}
+
+/* freccia login */
+#login span:nth-child(2) img{
+    width:15px;
+    padding:10px 1px;
+}
+
+#login:hover {
+   border: 1px solid rgba(131, 131, 131, 0.27);
+   border-radius: 10px;
+}
+/* END MENU nav */
+
+/* START main page */
+main {
+    display: flex;
+}
+
+/* sezione dx div*/
+main > div:last-child{
+    background-color: rgb(183, 192, 205);
+    padding-left: 6rem;
+    padding-right: 6rem;
+ }
+/* sezione sx div*/
+main > div:first-child{
+    background-color: aliceblue;
+ }
+ /* sezione sx contents*/
+main div section{
+    margin: 2rem;
+}
+a{
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+}
+ul{
+   list-style: none;
+   padding: 0;
+}
+
+/* sezione dx contents*/
+#tendenza {
+    display: flex;
+    justify-content:space-around;
+}
+#tendenza div{
+    border: 1px solid rgba(0, 0, 0, 0.547);
+    height: 10rem;
+    width: 16rem;
+    background-image: url("https://esports.gazzetta.it/wp-content/uploads/2022/05/14/28/Apex-Legends-Mobile.jpg");
+    background-size:cover;
+    color: aliceblue;
+    font-weight: bold;
+    border-radius: 9px;
+    /* box-shadow: 2px 1px 10px black;  ombra esterna */ 
+}
+
+h5,h3{
+    padding-left: 1rem;
+}
+/* div postPopolari */
+#postPopolari {
+    display: flex;
+}
+#postPopolari button{
+    width: 100px;
+    border: 1px solid rgb(60, 91, 192);
+    border-radius: 100px;
+    font-weight: bold;
+    color:  rgb(60, 91, 192);
+    border: none;
+}
+#postPopolari div section,#postPopolari > div:last-child{
+    border: 1px solid rgba(131, 131, 131, 0.472);
+    background-color: rgb(245, 251, 251);
+    border-radius: 5px;
+}
+
+#postPopolari div:first-child {
+    height: 40px;
+}
+#postPopolari button{
+    height: 2rem;
+}
+#postPopolari button:hover{
+    background-color:rgba(120, 120, 120, 0.226) ;
+}
+#postPopolari div:first-child section:first-child{
+    display: flex;
+    justify-content: space-around;
+}
+#postPopolari button:nth-child(3),
+#postPopolari button:nth-child(4),
+#postPopolari button:nth-child(5){
+    color: rgb(99, 99, 99);
+}
+#postPopolari div:first-child section:last-child{
+    height: 170px;
+    text-align: center;
+    padding-left: 2rem;
+}
+#comunitaPop div a{
+    color: rgb(63, 63, 63);
+    font-size: small;
+}
+#comunitaPop a:hover{
+    text-decoration: underline;
+}
+#comunitaPop div ul{
+    padding: 10px;
+    font-size: small;
+}
+#comunitaPop li{
+    padding: 10px;
+    border-top: 1px solid rgba(131, 131, 131, 0.313);
+}
+#comunitaPop h3{ 
+    width: 150px;
+    border-radius: 100px;
+    font-weight: bold;
+    color:  rgb(60, 91, 192);
+}
+#comunitaPop h3:hover{ 
+    background-color: rgba(215, 215, 215, 0.356);
+    border-radius: 100px;
+}
+/* END main page */
+
+
+/* Modifiche Alberto */
+main > div > section > ul > li {
+    display: flex;
+    justify-content: flex-start;
+}
+main > div > section > ul > li > img:last-child {
+    margin-left: auto;
+}
+main li > img:first-child {
+    width: 40px;
+}
+main li > img:last-child {
+    width: 30px;
+}

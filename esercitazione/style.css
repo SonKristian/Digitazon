@@ -1,0 +1,37 @@
+a, a:visited{
+    text-decoration:none;
+    color: black;
+}
+
+a[href="/melange"] {
+    color: red;
+}
+
+a[href="/the-one-ring"] {
+    color: gold;
+}
+
+.movies-quotes span:first-child{
+    font-weight: bold;
+    font-style : normal;
+}
+
+.movies-quotes span:nth-child(2n){
+    font-style : italic;
+}
+
+.movies-quotes span:first-child::after{
+    content:"«";
+}
+
+.movies-quotes span:nth-child(2n):after{
+   content: "»";
+}
+
+input:checked + span::after {
+   content: "❤";
+}
+
+button:hover{
+    visibility: hidden;
+}
