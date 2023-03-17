@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
 
 body{
@@ -31,8 +32,9 @@ nav div {
   background: rgba(255, 255, 255, 0.2);
   display: flex;
   border-radius: 20px;
-  border-color: rgb(30,215 ,96);
+  border-color:  rgb(30,215,96);
   padding: 10px;
+  margin: 1rem;
 }
 
 #searchbar input {
@@ -52,40 +54,23 @@ nav div img {
   margin: 1rem;
 }
 
-ul {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  padding: 2rem;
-}
-
-ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 1rem;
-}
-
 button {
   background-color: rgb(30,215 ,96);
   border-radius: 10px;
   border: none;
   width: 100px;
   height: 30px;
-  color: white;
   text-decoration: none;
 }
 
  #bar-button {
   background-color: rgb(30,215 ,96);
   border: none;
-  width: 50px;
+  width: 40px;
   height: 40px;
-  color: white;
+  border-radius: 100px;
   text-decoration: none;
 }
-
 
 button:hover {
   opacity: 80%;
