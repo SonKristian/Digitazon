@@ -73,7 +73,7 @@ ul li a {
   border-radius: 50px;
 }
 
-#buttons {
+#buttons-for-user {
   display: flex;
   gap: 4rem;
   margin: 2rem;
@@ -98,7 +98,7 @@ ul li a {
   cursor: pointer;
 }
 
-#buttons #follow {
+#buttons-for-user #follow {
   background-color: transparent;
   border-radius: 5px;
   border: 2px solid rgb(255, 255, 255, 0.2);
