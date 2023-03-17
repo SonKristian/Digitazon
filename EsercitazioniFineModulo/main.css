@@ -1,0 +1,38 @@
+main{
+    display:flex;
+    width: 100%;
+}
+
+main > div:nth-child(2){
+    width: 100%;
+
+}
+
+#sidebar{
+    display: flex;
+    width: 15%;
+    height: 600px;
+    background-color: black;
+    border-right: 2px solid rgba(128, 128, 128, 0.171);
+  }
+
+  .singer{
+    background-image: url("https://imageio.forbes.com/specials-images/dam/imageserve/1135932331/960x0.jpg?format=jpg&width=960");
+    background-size:cover;
+    background-position: center;
+    display:flex;
+    justify-content: flex-start;
+    height: 300px;
+    color: white;
+    padding: 1rem;
+  }
+
+  #text{
+     padding: 1rem;
+  }
+
+.singer img{
+    margin-right: 2rem;
+    width: 100px;
+    border-radius: 50px;
+}
