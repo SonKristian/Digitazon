@@ -77,20 +77,25 @@ html{
 @media screen and (min-width: 250px) {
     #top-header .nav {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-          align-items: center;
+        flex-direction: column ;
     }
 
- #logo-container{
-    
-   
- }
 
- nav{
-    flex-direction: column;
-    justify-content: center;
-  
- }
+    #landing {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .landing-left, .landing-right {
+        width: 100%;
+    }
+
+    #app-footer {
+        flex-direction: column;
+    }
+
+    .footer-left,.footer-right {
+        width: 100%;
+    }
 
 }
