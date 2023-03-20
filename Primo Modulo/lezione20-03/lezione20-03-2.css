@@ -1,65 +1,82 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     padding: 0;
     margin: 0;
     font-size: 16px;
 }
 
-/*mobile e others */
-#box{
-    width: 100px;
-    height: 100px;
-    background-color: navy;
-}
-
-nav{
+nav {
     background-color: lightgray;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
     display: flex;
-    flex-direction: column;
     /* justify-content: space-between; */
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    display: none;
 }
 
-nav .menu-left{
+nav .menu-left {
     display: flex;
     flex-direction: column;
 }
 
+#mobile-ham {
+    cursor: pointer;
+}
 
-@media screen and (min-width:420px){
- 
-    nav{
-       flex-direction: row;
-       justify-content: space-between;
-       align-items: initial;
-       text-align: left;
+/* mobile + others */
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+/* if window.width >= 420px */
+/*
+@media screen and (min-width: 420px) {
+
+    #mobile-ham {
+        display: none;
     }
 
-    nav .menu-left{
+    nav {
         flex-direction: row;
         justify-content: space-between;
+        align-items: initial;
+        text-align: left;
+        display: flex;
     }
-}   
 
-@media screen and (min-width:488px){
+    nav .menu-left {
+        flex-direction: row;
+        gap: 15px;
+    }
 
-    #box{
-        background-color: pink;
+}
+*/
+
+/* if window.width >= 480px */
+@media screen and (min-width: 480px) {
+
+    #box {
+        background-color: palevioletred;
         width: 300px;
         height: 300px;
     }
+
 }
 
-@media screen and (min-width:780px){
+/* if window.width >= 780px */
+@media screen and (min-width: 780px) {
 
-    #box{
-        background-color: rgb(192, 255, 206);
+    #box {
+        background-color:greenyellow;
         width: 400px;
         height: 400px;
     }
+
 }
