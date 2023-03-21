@@ -62,16 +62,16 @@ html{
     color: #dae5eb;
 }
 
+#app-footer img{
+    width: 100px;
+}
+
 .footer-left {
     width: 70%;
 }
 
 .footer-right {
     width: 30%;
-}
-
-.logo-inline {
-    display: inline-flex;
 }
 
 @media screen and (min-width: 250px) {
