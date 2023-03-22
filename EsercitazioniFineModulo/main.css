@@ -125,6 +125,7 @@ ul li a {
 
 .flex-list {
   display: flex;
+  align-items: center;
 }
 
 .songs img {
