@@ -14,8 +14,6 @@ main {
 
 main > div:nth-child(2) {
   width: 100%;
-  margin-bottom: 7.5rem;
-  margin-left: 12.7rem;
 }
 
 #sidebar {
@@ -23,14 +21,9 @@ main > div:nth-child(2) {
   width: 15%;
   background-color: black;
   border-right: 2px solid rgba(128, 128, 128, 0.171);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  top: 0;
 }
 
-#sidebar img {
-  margin: 1rem;
+#logo-section img {
   width: 100px;
 }
 
@@ -186,7 +179,7 @@ footer {
   justify-content: space-between;
   border-top: 1px solid rgb(255, 255, 255, 0.2);
   height: 100px;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   left: 0;
   right: 0;

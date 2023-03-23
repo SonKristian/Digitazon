@@ -14,14 +14,14 @@ body {
 header {
   border-bottom: 1px solid rgba(128, 128, 128, 0.171);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: rgb(0, 0, 0);
   width: 100%;
 }
 
 nav {
   display: flex;
-  gap: 20rem;
+  gap: 13rem;
   height: 60px;
 }
 

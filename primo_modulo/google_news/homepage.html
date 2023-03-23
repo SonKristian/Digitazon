@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+           html{
+            @apply text-sm bg-gray-300
+           }
+        }
+
+        @layer components {
+       .division{
+        @apply p-4
+          }
+        }
+    </style>
+    <style>
+        li{
+        cursor: pointer;
+        }
+
+        li:hover{
+            color: skyblue;
+        }
+
+        #home{
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .fa-solid{
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        img{
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/ecb8f521e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="bg-gray-800 text-white">
+        <nav class="flex justify-between items-center h-[40px]">
+           <div class="flex">
+            <p id="home">Google News</p>
+           </div>
+           <div class="flex gap-5 items-center">
+            <input class="bg-gray-300 w-[500px] p-4 h-[30px] rounded-[5px]"  type="search" placeholder="cerca argomenti,località e fonti">
+            <p><i class="fa-solid fa-question"></i></p>
+            <p><i class="fa-solid fa-gear"></i></p>  
+        </div>
+           <div class="flex gap-5 items-center">
+            <p><i class="fa-solid fa-bars"></i></p>
+            <img class="w-[50px]" src="https://download.logo.wine/logo/Microsoft_account/Microsoft_account-Logo.wine.png">
+            </div>
+        </nav>
+        <nav class="ml-[100px] flex justify-between items-center bg-gray-800 h-[40px]">
+            <ul class="flex gap-5 border-r border-grey">
+                <li class="division">Home Page</li>
+                <li class="division">Per Te</li>
+                <li class="division">Stai Seguendo</li>
+                <li class="division">News Showcase</li>
+            </ul>
+            <ul class="mr-[150px] flex gap-5">
+                <li>Italia</li>
+                <li>Dal Mondo</li>
+                <li>Notizie Locali</li>
+                <li>Affari</li>
+                <li>Scienza e tecnologia</li>
+                <li>Intrattenimento</li>
+                <li>Sport</li>
+                <li>Salute</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex max-w-5xl mx-auto mt-5 gap-5">
+        <div id="left" class="flex flex-col w-3/5">
+           <div class="flex flex-col">
+                <p class="text-sky-600">Modalità di classificazione di questi articoli</p>
+                <p>Le tue notizie</p>
+                <p>Giovedì 23 marzo</p>
+            </div>
+            <div id="card-news" class="mt-5 bg-gray-800 flex flex-col rounded-[10px] border-b-gray-200">
+              <div class="flex text-sky-600 ml-5 mb-5 mt-4 gap-5"> 
+                <p>Notizie principali</p>
+              </div>
+              <div class="flex text-white ml-5 gap-5 flex-row">
+                <div class="flex">
+                <img class="w-[500px] h-[200px] rounded-[10px]" src="https://www.ilriformista.it/wp-content/uploads/2023/03/scontri-napoli-1-900x600.jpg">
+            </div>
+            <div class="flex flex-col gap-5">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, quod perferendis voluptas voluptatum nobis illum. Nobis maxime cumque pariatur cupiditate magni atque</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse provident cum veniam officiis placeat eum et ex dolores optio deleniti </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti similique quasi hic, explicabo sunt cupiditate accusamus minima eius numquam.</p>
+            </div>
+            </div>
+            <div class="mb-5 flex h-[100px] w-[180px] ml-5 text-white items-center">
+            <p>Lorem ipsum dolori mollitia lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+            <div class="border-grey-400 border-b mx-3">
+            </div>
+            <div class="mt-5 flex text-white ml-5 gap-5 flex-row">
+              <div class="flex">
+              <img class="w-[500px] rounded-[10px]" src="https://www.ilriformista.it/wp-content/uploads/2023/03/scontri-napoli-1-900x600.jpg">
+          </div>
+          <div class="flex flex-col gap-5">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, quod perferendis voluptas voluptatum nobis illum. Nobis maxime cumque pariatur cupiditate magni atque</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse provident cum veniam officiis placeat eum et ex dolores optio deleniti </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti similique quasi hic, explicabo sunt cupiditate accusamus minima eius numquam.</p>
+          </div>
+          </div>
+          <div class="mb-5 flex h-[100px] w-[180px] ml-5 text-white items-center">
+            <p>Lorem ipsum dolori mollitia lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+      </div>
+    </div>
+    
+    <div id="right"  class="w-2/5 flex flex-col items-end">
+        <div id="meteo" class=" w-[150px] text-white rounded-[10px] flex gap-5 items-center bg-gray-800 justify-start">
+            <div class="flex">
+                <p>meteo</p>
+                </div>
+            <div>
+                <p>Campania</p>
+                <p>17 C</p>
+                <p>weather.com</p>
+            </div>
+        </div>
+
+        <div class="text-white ml-5 mt-5 rounded-[10px] flex flex-col gap-5 items-center bg-gray-800 justify-start">
+            <div class="flex border-grey-400 border-b mx-3 w-96">      
+                <p class="text-emerald-300">Notizie Locali</p>
+            </div>
+            <div class="flex mx-3 gap-4 border-grey-400 border-b">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolorem ut dignissimos, aliquid animi sed cumque veritatis perferendis nesciunt eligendi et deleniti recusandae maxime, ex consequuntur laudantium quo iure? Mollitia.</p>
+                <img class="w-[50px] h-[50px] rounded-[10px]" src="https://static.sky.it/editorialimages/218c906bd9eadca89a4c2e4be62981c094400f3e/skysport/it/calcio/champions-league/partite/2022/ottavi/napoli-eintracht-francoforte/live/content/napoli_esultanza_2.jpg">
+            </div>
+            <div class="flex mx-3 gap-4 border-grey-400 border-b">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, suscipit. Eligendi quae aliquam voluptatum quo numquam soluta architecto, fugiat mollitia eius, minus cum necessitatibus sunt nihil illo cumque aspernatur reiciendis.</p>
+                <img class="w-[50px] h-[50px] rounded-[10px]" src="https://static.sky.it/editorialimages/218c906bd9eadca89a4c2e4be62981c094400f3e/skysport/it/calcio/champions-league/partite/2022/ottavi/napoli-eintracht-francoforte/live/content/napoli_esultanza_2.jpg">
+            </div>
+            <div class="flex  ml-3 gap-4 ">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos atque explicabo neque, voluptas numquam est voluptatibus in ea? Error eaque eum officia dolores ratione saepe quod libero fuga aliquid at?</p>
+                <img class="w-[50px] h-[50px] rounded-[10px]" src="https://static.sky.it/editorialimages/218c906bd9eadca89a4c2e4be62981c094400f3e/skysport/it/calcio/champions-league/partite/2022/ottavi/napoli-eintracht-francoforte/live/content/napoli_esultanza_2.jpg">
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
