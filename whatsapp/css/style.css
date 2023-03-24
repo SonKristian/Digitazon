@@ -1,27 +1,28 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  html,
-  body {
-    font-family: Helvetica, sans-serif;
-    font-weight: medium;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-  }
-  
-#search-chat input{
-    border: 2px solid #128c7e;
-    outline: none;
+html,
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: medium;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+#search-chat input {
+  border: 2px solid #128c7e;
+  outline: none;
 }
 
 .time {
   opacity: 0.7;
 }
 
-a, a:visited{
-    color: #128c7e;
+a,
+a:visited {
+  color: #128c7e;
 }
 
 .notification {
@@ -49,7 +50,7 @@ a, a:visited{
 #center-right {
   background-color: antiquewhite;
   padding-top: 4rem;
-padding-bottom: 7rem;
+  padding-bottom: 7rem;
 }
 
 .sent_messages p {
@@ -76,30 +77,30 @@ img {
   cursor: pointer;
 }
 
-#header-right{
-    background-color: rgb(229 231 235);
-    position: fixed;
-    margin: 0;
-    padding: 1rem;
-    width: 70%;
-    height: 8.5%;
-    top:0;
-    right: 0;
+#header-right {
+  background-color: rgb(229 231 235);
+  position: fixed;
+  margin: 0;
+  padding: 1rem;
+  width: 70%;
+  height: 8.5%;
+  top: 0;
+  right: 0;
 }
 
-#footer-right{
-    background-color: white;
-    position: fixed;
-    margin: 0;
-    height: 10%;
-    width:70%;
-    bottom:0;
-    right: 0;
+#footer-right {
+  background-color: white;
+  position: fixed;
+  margin: 0;
+  height: 10%;
+  width: 70%;
+  bottom: 0;
+  right: 0;
 }
 
-#text-bar input{
-    border: 2px solid #128c7e;
-    outline: none;
+#text-bar input {
+  border: 2px solid #128c7e;
+  outline: none;
 }
 
 @media screen and (max-width: 680px) {
@@ -142,5 +143,4 @@ img {
     left: 0;
     right: 0;
   }
-
 }
