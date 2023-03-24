@@ -14,72 +14,84 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
       @layer base {
+      
       }
 
       @layer components {
-        
         .chat {
           @apply flex items-center gap-4 py-4 pl-2 border-b-[1px] border-zinc-400;
         }
-         
-        .chat h2{
-          @apply font-bold
+
+        .chat h2 {
+          @apply font-bold;
         }
 
-        .received_messages{
-          @apply  pl-3 flex justify-start pt-1
+        .received_messages {
+          @apply pl-3 flex justify-start pt-1;
         }
 
-        .sent_messages{
-          @apply pr-3 flex justify-end pt-1 pb-2 text-white
+        .sent_messages {
+          @apply pr-3 flex justify-end pt-1 pb-2 text-white;
         }
 
-        .img-detail{
-          @apply w-[30px] rounded-[30px]
+        .img-detail {
+          @apply w-[30px] rounded-[30px];
         }
 
-        .user-img{
-          @apply w-[50px] h-[50px] rounded-[50px]
+        .user-img {
+          @apply w-[50px] h-[50px] rounded-[50px];
         }
-
       }
     </style>
   </head>
   <body>
     <main class="flex">
-      <div id="left-main" class="w-[30%] flex flex-col bg-white border-r-[1px] border-zinc-400">
-        <div id="header-left" class="flex flex-col bg-gray-200 ">
+      <div
+        id="left-main"
+        class="w-[30%] flex flex-col bg-white border-r-[1px] border-zinc-400"
+      >
+        <div id="header-left" class="flex flex-col bg-gray-200">
           <div class="flex justify-between mt-2 ml-3 mr-10 items-center mb-2">
             <div>
-              <img src="immagini/user.png" class=" w-[40px] rounded-[30px]" />
+              <img src="immagini/user.png" class="w-[40px] rounded-[30px]" />
             </div>
             <div class="flex">
               <ul class="flex gap-6">
                 <li>
-                  <img src="immagini/group.png" class="img-detail"/>
+                  <img src="immagini/group.png" class="img-detail" />
                 </li>
                 <li>
-                  <img src="immagini/stato.png" class="img-detail"/>
+                  <img src="immagini/stato.png" class="img-detail" />
                 </li>
                 <li>
-                  <img src="immagini/chat.png" class="img-detail"/>
+                  <img src="immagini/chat.png" class="img-detail" />
                 </li>
                 <li>
-                  <img src="immagini/more.png" class="img-detail"/>
+                  <img src="immagini/more.png" class="img-detail" />
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div id="search-chat" class="flex bg-white pl-2 py-4 gap-4 items-center border-b-[1px] border-zinc-400">
+        <div
+          id="search-chat"
+          class="flex bg-white pl-2 py-4 gap-4 items-center border-b-[1px] border-zinc-400"
+        >
           <div>
-            <input type="search" class="bg-gray-200 pl-9 text-grat-400 w-[350px] h-[30px] rounded-[10px]" placeholder="Cerca o inizia nuova chat"/>
+            <input
+              type="search"
+              class="bg-gray-200 pl-9 text-grat-400 w-[350px] h-[30px] rounded-[10px]"
+              placeholder="Cerca o inizia nuova chat"
+            />
           </div>
           <img src="immagini/filter.png" class="w-[20px] h-[20px]" />
         </div>
-        <div id="archived-chat" class="flex pl-2 pt-2 pb-4 h-[50px] items-center border-b-[1px] border-zinc-400">
+        <div
+          id="archived-chat"
+          class="flex pl-2 pt-2 pb-4 h-[50px] items-center border-b-[1px] border-zinc-400"
+        >
           <div class="flex gap-2">
-            <img src="immagini/archive.png" class="w-[25px] h-[25px]">
+            <img src="immagini/archive.png" class="w-[25px] h-[25px]" />
             <p>Archiviate</p>
           </div>
         </div>
@@ -88,124 +100,144 @@
             <img src="immagini/totti.jpg" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[6rem]">
-            <h2>Francesco Totti (Er Pupo)</h2>
-            <p class="time">11:45</p>
+            <div class="flex justify-between gap-[9rem]">
+              <h2>Francesco Totti (Er Pupo)</h2>
+              <p class="time">11:45</p>
+            </div>
+            <div id="messaggio" class="flex justify-between">
+              <p>Daje Roma Cristian</p>
+              <p class="notification">2</p>
+            </div>
           </div>
-          <div id="messaggio" class="flex justify-between">
-            <p>Daje Roma Cristian</p>
-            <p class="notification">2</p>
-          </div>
-        </div>
         </div>
         <div class="chat bg-gray-300">
           <div class="flex flex-col">
             <img src="immagini/ronaldo.jpg" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[9.5rem]">
-            <h2>Cristiano Ronaldo</h2>
-            <p class="time">11:45</p>
-          </div>
-          <div id="messaggio" class="flex justify-between">
-            <p>adipisci velit impedit harum esse ipsa...</p>
-            <img src="immagini/done.png" class="w-[26px] h-[25px]">
+            <div class="flex justify-between gap-[12.5rem]">
+              <h2>Cristiano Ronaldo</h2>
+              <p class="time">11:45</p>
+            </div>
+            <div id="messaggio" class="flex justify-between">
+              <p>adipisci velit impedit harum esse ipsa...</p>
+              <img src="immagini/done.png" class="w-[26px] h-[25px]" />
+            </div>
           </div>
         </div>
-        </div> 
         <div class="chat">
           <div class="flex flex-col">
             <img src="immagini/oshimen.jpg" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[10.5rem]">
-            <h2>Victor Oshimen</h2>
-            <p class="time">11:40</p>
+            <div class="flex justify-between gap-[13.8rem]">
+              <h2>Victor Oshimen</h2>
+              <p class="time">11:40</p>
+            </div>
+            <div id="messaggio" class="flex justify-between">
+              <p>Devo fare più gol in campionato</p>
+              <p class="notification">1</p>
+            </div>
           </div>
-          <div id="messaggio" class="flex justify-between">
-            <p>Devo fare più gol in campionato</p>
-            <p class="notification">1</p>
-          </div>
-        </div>
         </div>
         <div class="chat">
           <div class="flex flex-col">
             <img src="immagini/bumstead.png" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[10.2rem]">
-            <h2>Chris Bumstead</h2>
-            <p class="time">10:00</p>
+            <div class="flex justify-between gap-[13.3rem]">
+              <h2>Chris Bumstead</h2>
+              <p class="time">10:00</p>
+            </div>
+            <div id="messaggio" class="flex justify-between">
+              <p>Oggi alle 17 c'è l'allenamento</p>
+            </div>
           </div>
-          <div id="messaggio" class="flex justify-between">
-            <p>Oggi alle 17 c'è l'allenamento</p>
-          </div>
-        </div>
         </div>
         <div class="chat">
           <div class="flex flex-col">
             <img src="immagini/malone.png" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[10.1rem]">
-            <h2>Post Malone</h2>
-            <p class="time">Yesterday</p>
+            <div class="flex justify-between gap-[13.4rem]">
+              <h2>Post Malone</h2>
+              <p class="time">Yesterday</p>
+            </div>
+            <div id="messaggio" class="flex justify-between">
+              <p>I'm writing a new song</p>
+            </div>
           </div>
-          <div id="messaggio" class="flex justify-between">
-            <p>I'm writing a new song</p>
-          </div>
-        </div>
         </div>
         <div class="chat">
           <div class="flex flex-col">
             <img src="immagini/bale.jpg" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[9.5rem]">
-            <h2>Christian Bale</h2>
-            <p class="time">Yesterday</p>
+            <div class="flex justify-between gap-[12.5rem]">
+              <h2>Christian Bale</h2>
+              <p class="time">Yesterday</p>
+            </div>
+            <div id="messaggio" class="flex justify-between">
+              <p>I'm not batman</p>
+            </div>
           </div>
-          <div id="messaggio" class="flex justify-between">
-            <p>I'm not batman</p>
-          </div>
-        </div>
         </div>
         <div class="chat">
           <div class="flex flex-col">
             <img src="immagini/holland.jpg" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[10rem]">
-            <h2>Tom Holland</h2>
-            <p class="time">Yesterday</p>
+            <div class="flex justify-between gap-[13.3rem]">
+              <h2>Tom Holland</h2>
+              <p class="time">Yesterday</p>
+            </div>
+            <div id="messaggio" class="flex justify-between">
+              <p>A new film of Spider-Man will arrive...</p>
+            </div>
           </div>
-          <div id="messaggio" class="flex justify-between">
-            <p>A new film of Spider-Man will arrive...</p>
-          </div>
-        </div>
         </div>
         <div class="chat">
           <div class="flex flex-col">
             <img src="immagini/pitt.jpg" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[12rem]">
-            <h2>Brad Pitt</h2>
-            <p class="time">Yesterday</p>
-          </div>
-          <div id="messaggio" class="flex justify-between">
-            <p>Don't write me</p>
+            <div class="flex justify-between gap-[15rem]">
+              <h2>Brad Pitt</h2>
+              <p class="time">Yesterday</p>
+            </div>
+            <div id="messaggio" class="flex justify-between">
+              <p>Don't write me</p>
+            </div>
           </div>
         </div>
+        <div
+          id="security"
+          class="flex items-center justify-center text-xs gap-2 pt-4"
+        >
+          <div class="flex gap-2">
+            <img src="immagini/lock.png" class="w-[15px]" />
+          </div>
+          <p>
+            i tuoi messaggi sono protetti da crittografia
+            <a href="#">end-to-end</a>
+          </p>
         </div>
-      
       </div>
 
-      <div id="right-main" class="w-[70%] flex justify-start flex-col bg-gray-200">
-        <div id="header-right" class="flex justify-between mt-2 ml-3 mr-10 items-center mb-2">
+      <div
+        id="right-main"
+        class="w-[70%] flex justify-start flex-col bg-gray-200"
+      >
+        <div
+          id="header-right"
+          class="flex justify-between mt-2 ml-3 mr-10 items-center mb-2"
+        >
           <div class="flex items-center gap-3">
             <div>
-              <img src="immagini/ronaldo.jpg" class="w-[40px] h-[40px] rounded-[50px]"/>
+              <img
+                src="immagini/ronaldo.jpg"
+                class="w-[40px] h-[40px] rounded-[50px]"
+              />
             </div>
             <div>
               <p class="font-bold">Cristiano Ronaldo</p>
@@ -214,41 +246,70 @@
           <div class="flex gap-10">
             <img src="immagini/call.png" class="w-[30px]" />
             <img src="immagini/cam.png" class="w-[30px]" />
-            <img src="immagini/more.png" class="img-detail"/>
+            <img src="immagini/more.png" class="img-detail" />
           </div>
         </div>
 
         <div id="center-right" class="flex flex-col">
           <div id="chat-container" class="flex flex-col gap-1 mt-5">
-          <div class="sent_messages">
-            <p>Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi eius natus iusto rerum dolore? Saepe, facilis aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit impedit harum esse ipsa!<br><span>11:45</span></p>
+            <div class="sent_messages">
+              <p>
+                Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam quasi eius natus iusto rerum dolore? Saepe, facilis
+                aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit
+                impedit harum esse ipsa!<br /><span>11:45</span>
+              </p>
+            </div>
+            <div class="received_messages">
+              <p>Ciao<br /><span>11:48</span></p>
+            </div>
+            <div class="received_messages">
+              <p>
+                Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam quasi eius natus iusto rerum dolore? Saepe, facilis
+                aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit
+                impedit harum esse ipsa!<br /><span>11:45</span>
+              </p>
+            </div>
+            <div class="sent_messages">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                molestiae laboriosam eum soluta laborum at expedita doloribus
+                ex, nostrum dicta, deserunt, quas tempore reiciendis nesciunt
+                temporibus nemo harum quasi architecto!<br /><span>11:48</span>
+              </p>
+            </div>
+            <div class="sent_messages">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                molestiae laboriosam eum soluta laborum at expedita doloribus
+                ex, nostrum dicta, deserunt, quas tempore reiciendis nesciunt
+                temporibus nemo harum quasi architecto!<br /><span>11:48</span>
+              </p>
+            </div>
+            <div class="received_messages">
+              <p>
+                Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam quasi eius natus iusto rerum dolore? Saepe, facilis
+                aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit
+                impedit harum esse ipsa!<br /><span>11:45</span>
+              </p>
+            </div>
           </div>
-          <div class="received_messages">
-            <p>Ciao<br><span>11:48</span></p>
-          </div>
-          <div class="received_messages">
-            <p>Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi eius natus iusto rerum dolore? Saepe, facilis aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit impedit harum esse ipsa!<br><span>11:45</span></p>
-          </div>
-          <div class="sent_messages">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestiae laboriosam eum soluta laborum at expedita doloribus ex, nostrum dicta, deserunt, quas tempore reiciendis nesciunt temporibus nemo harum quasi architecto!<br><span>11:48</span></p>
-          </div>
-          <div class="sent_messages">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestiae laboriosam eum soluta laborum at expedita doloribus ex, nostrum dicta, deserunt, quas tempore reiciendis nesciunt temporibus nemo harum quasi architecto!<br><span>11:48</span></p>
-          </div>
-          <div class="received_messages">
-            <p>Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi eius natus iusto rerum dolore? Saepe, facilis aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit impedit harum esse ipsa!<br><span>11:45</span></p>
-          </div>
-        </div>
         </div>
 
         <div id="footer-right" class="flex bg-white">
           <div id="text-bar" class="flex bg-white p-6 gap-4 items-center">
             <div class="flex ml-2 gap-4">
-              <img src="immagini/emoji.png" class="w-[30px] rounded-[50px]">
-              <img src="immagini/clip.png" class="w-[30px] rounded-[50px]">
+              <img src="immagini/emoji.png" class="w-[30px] rounded-[50px]" />
+              <img src="immagini/clip.png" class="w-[30px] rounded-[50px]" />
             </div>
             <div>
-              <input type="text" class="bg-gray-200 pl-9 text-grat-400 w-[720px] h-[30px] rounded-[10px]" placeholder="Scrivi un messaggio"/>
+              <input
+                type="text"
+                class="bg-gray-200 pl-9 text-grat-400 w-[720px] h-[30px] rounded-[10px]"
+                placeholder="Scrivi un messaggio"
+              />
             </div>
             <img src="immagini/mic.png" class="w-[30px] rounded-[50px]" />
             <img src="immagini/send.png" class="img-detail" />

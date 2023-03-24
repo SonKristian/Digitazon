@@ -1,3 +1,16 @@
+* {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    font-family: Helvetica, sans-serif;
+    font-weight: medium;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  
 #search-chat input{
     border: 2px solid #128c7e;
     outline: none;
@@ -5,6 +18,10 @@
 
 .time {
   opacity: 0.7;
+}
+
+a, a:visited{
+    color: #128c7e;
 }
 
 .notification {
@@ -31,6 +48,8 @@
 
 #center-right {
   background-color: antiquewhite;
+  padding-top: 4rem;
+padding-bottom: 7rem;
 }
 
 .sent_messages p {
@@ -50,7 +69,6 @@
 }
 
 span {
-  opacity: 0.6;
   font-size: 0.6rem;
 }
 
@@ -67,11 +85,6 @@ img {
     height: 8.5%;
     top:0;
     right: 0;
-}
-
-#center-right{
-    padding-top: 4rem;
-    padding-bottom: 7rem;
 }
 
 #footer-right{
@@ -130,7 +143,4 @@ img {
     right: 0;
   }
 
-  span {
-    opacity: 1;
-  }
 }
