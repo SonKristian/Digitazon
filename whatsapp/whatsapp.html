@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whatsapp</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="immagini/logo_wp.png" />
+    <script
+      src="https://kit.fontawesome.com/ecb8f521e9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer base {
+      }
+
+      @layer components {
+        .fa-ellipsis-vertical {
+          @apply text-xl;
+        }
+
+        .chat {
+          @apply flex ml-2 items-center gap-4 mb-5 pb-3 border-b-[1px] border-zinc-400;
+        }
+         
+        .chat h2{
+          @apply font-bold
+        }
+
+        .received_messages{
+          @apply  ml-1 flex justify-start mt-1 mb-2
+        }
+
+        .sent_messages{
+          @apply mr-1 flex justify-end mt-1
+        }
+
+        .img-detail{
+        @apply w-[30px] rounded-[30px]
+        }
+
+        .user-img{
+          @apply w-[50px] h-[50px] rounded-[50px]
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <main class="flex">
+      <div id="left-main" class="w-[30%] flex flex-col bg-white border-r-[1px] border-zinc-400">
+        <div id="header-left" class="flex flex-col bg-gray-200 ">
+          <div class="flex justify-between mt-2 ml-3 mr-10 items-center mb-2">
+            <div>
+              <img src="immagini/user.png" class=" w-[40px] rounded-[30px]" />
+            </div>
+            <div class="flex">
+              <ul class="flex gap-6">
+                <li>
+                  <img src="immagini/group.png" class="img-detail"/>
+                </li>
+                <li>
+                  <img src="immagini/stato.png" class="img-detail"/>
+                </li>
+                <li>
+                  <img src="immagini/chat.png" class="img-detail"/>
+                </li>
+                <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="search-chat" class="flex bg-white mt-1 p-2 gap-4 items-center mb-2 border-b-[1px] border-zinc-400">
+          <div>
+            <input type="search" class="bg-gray-200 pl-9 text-grat-400 w-[350px] h-[30px] rounded-[10px]" placeholder="Cerca o inizia nuova chat"/>
+          </div>
+          <img src="immagini/filter.png" class="w-[20px] h-[20px]" />
+        </div>
+        <div class="chat">
+          <div class="flex flex-col">
+            <img src="immagini/totti.jpg" class="user-img" />
+          </div>
+          <div id="contacts">
+            <div class="flex justify-between gap-[6rem]">
+            <h2>Francesco Totti (Er Pupo)</h2>
+            <p class="time">11:45</p>
+          </div>
+          <div id="messaggio" class="flex justify-between">
+            <p>Daje Roma Cristian</p>
+            <p class="notification">2</p>
+          </div>
+        </div>
+        </div>
+        <div class="chat">
+          <div class="flex flex-col">
+            <img src="immagini/ronaldo.jpg" class="user-img" />
+          </div>
+          <div id="contacts">
+            <div class="flex justify-between gap-[9rem]">
+            <h2>Cristiano Ronaldo</h2>
+            <p class="time">11:45</p>
+          </div>
+          <div id="messaggio" class="flex justify-between">
+            <p>adipisci velit impedit harum esse ipsa...</p>
+          </div>
+        </div>
+        </div> 
+        <div class="chat">
+          <div class="flex flex-col">
+            <img src="immagini/oshimen.jpg" class="user-img" />
+          </div>
+          <div id="contacts">
+            <div class="flex justify-between gap-[10rem]">
+            <h2>Victor Oshimen</h2>
+            <p class="time">11:40</p>
+          </div>
+          <div id="messaggio" class="flex justify-between">
+            <p>Devo fare più gol in campionato</p>
+            <p class="notification">1</p>
+          </div>
+        </div>
+        </div>
+        <div class="chat">
+          <div class="flex flex-col">
+            <img src="immagini/bumstead.png" class="user-img" />
+          </div>
+          <div id="contacts">
+            <div class="flex justify-between gap-[10rem]">
+            <h2>Chris Bumstead</h2>
+            <p class="time">10:00</p>
+          </div>
+          <div id="messaggio" class="flex justify-between">
+            <p>Oggi alle 17 c'è l'allenamento</p>
+          </div>
+        </div>
+        </div>
+        <div class="chat">
+          <div class="flex flex-col">
+            <img src="immagini/malone.png" class="user-img" />
+          </div>
+          <div id="contacts">
+            <div class="flex justify-between gap-[10.1rem]">
+            <h2>Post Malone</h2>
+            <p class="time">Yesterday</p>
+          </div>
+          <div id="messaggio" class="flex justify-between">
+            <p>I'm writing a new song</p>
+          </div>
+        </div>
+        </div>
+        <div class="chat">
+          <div class="flex flex-col">
+            <img src="immagini/bale.jpg" class="user-img" />
+          </div>
+          <div id="contacts">
+            <div class="flex justify-between gap-[9.5rem]">
+            <h2>Christian Bale</h2>
+            <p class="time">Yesterday</p>
+          </div>
+          <div id="messaggio" class="flex justify-between">
+            <p>I'm not batman</p>
+          </div>
+        </div>
+        </div>
+        <div class="chat">
+          <div class="flex flex-col">
+            <img src="immagini/holland.jpg" class="user-img" />
+          </div>
+          <div id="contacts">
+            <div class="flex justify-between gap-[10rem]">
+            <h2>Tom Holland</h2>
+            <p class="time">Yesterday</p>
+          </div>
+          <div id="messaggio" class="flex justify-between">
+            <p>A new film of Spider-Man will arrive...</p>
+          </div>
+        </div>
+        </div>
+        <div class="chat">
+          <div class="flex flex-col">
+            <img src="immagini/pitt.jpg" class="user-img" />
+          </div>
+          <div id="contacts">
+            <div class="flex justify-between gap-[12rem]">
+            <h2>Brad Pitt</h2>
+            <p class="time">Yesterday</p>
+          </div>
+          <div id="messaggio" class="flex justify-between">
+            <p>Don't write me</p>
+          </div>
+        </div>
+        </div>
+      
+      </div>
+
+      <div id="right-main" class="w-[70%] flex justify-start flex-col bg-gray-200">
+        <div id="header-right" class="flex justify-between mt-2 ml-3 mr-10 items-center mb-2">
+          <div class="flex items-center gap-3">
+            <div>
+              <img src="immagini/ronaldo.jpg" class="w-[40px] h-[40px] rounded-[50px]"/>
+            </div>
+            <div>
+              <p class="font-bold">Cristiano Ronaldo</p>
+            </div>
+          </div>
+          <div class="flex gap-10">
+            <img src="immagini/call.png" class="w-[30px]" />
+            <img src="immagini/cam.png" class="w-[30px]" />
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </div>
+
+        <div id="center-right" class="flex flex-col">
+          <div id="chat-container" class="flex flex-col gap-1 mt-5">
+          <div class="sent_messages">
+            <p>Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi eius natus iusto rerum dolore? Saepe, facilis aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit impedit harum esse ipsa!<br><span>11:45</span></p>
+          </div>
+          <div class="received_messages">
+            <p>Ciao<br><span>11:48</span></p>
+          </div>
+          <div class="received_messages">
+            <p>Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi eius natus iusto rerum dolore? Saepe, facilis aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit impedit harum esse ipsa!<br><span>11:45</span></p>
+          </div>
+          <div class="sent_messages">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestiae laboriosam eum soluta laborum at expedita doloribus ex, nostrum dicta, deserunt, quas tempore reiciendis nesciunt temporibus nemo harum quasi architecto!<br><span>11:48</span></p>
+          </div>
+          <div class="sent_messages">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestiae laboriosam eum soluta laborum at expedita doloribus ex, nostrum dicta, deserunt, quas tempore reiciendis nesciunt temporibus nemo harum quasi architecto!<br><span>11:48</span></p>
+          </div>
+          <div class="received_messages">
+            <p>Ciao Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi eius natus iusto rerum dolore? Saepe, facilis aliquam! Itaque, voluptatum vitae nobis sed a adipisci velit impedit harum esse ipsa!<br><span>11:45</span></p>
+          </div>
+        </div>
+        </div>
+
+        <div id="footer-right" class="flex bg-white">
+          <div id="text-bar" class="flex bg-white p-3 mt-1 gap-4 items-center">
+            <div class="flex ml-2 gap-4">
+              <img src="immagini/emoji.png" class="w-[30px] rounded-[50px]">
+              <img src="immagini/clip.png" class="w-[30px] rounded-[50px]">
+            </div>
+            <div>
+              <input type="text" class="bg-gray-200 pl-9 text-grat-400 w-[740px] h-[30px] rounded-[10px]" placeholder="Scrivi un messaggio"/>
+            </div>
+            <img src="immagini/mic.png" class="w-[30px] rounded-[50px]" />
+            <img src="immagini/send.png" class="w-[30px] rounded-[50px]" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

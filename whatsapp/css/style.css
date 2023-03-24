@@ -1,0 +1,61 @@
+.time {
+  opacity: 0.7;
+}
+
+.notification {
+  background-color:#afff71c5;
+  border-radius: 50px;
+  width: 25px;
+  text-align: center;
+}
+
+.img-detail:hover{
+    background-color:#25D366;
+    border-radius: 50px;
+    width: 30px;
+    text-align: center;
+} 
+
+
+.fa-solid:hover{
+    background-color:#25D366;
+    border-radius: 50px;
+    width: 30px;
+    text-align: center;
+} 
+
+.chat:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+#center-right {
+  background-color: antiquewhite;
+}
+
+.sent_messages p {
+  text-align: right;
+  max-width: 65%;
+  padding: 12px;
+  border-radius: 10px;
+  background: #afff71c5;
+}
+
+.received_messages p {
+  text-align: right;
+  max-width: 65%;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+}
+
+span {
+  opacity: 0.6;
+  display: block;
+  font-size: 0.6rem;
+}
+
+img, .fa-solid {
+  cursor: pointer;
+}
+
