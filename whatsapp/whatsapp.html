@@ -17,12 +17,9 @@
       }
 
       @layer components {
-        .fa-ellipsis-vertical {
-          @apply text-xl;
-        }
-
+        
         .chat {
-          @apply flex ml-2 items-center gap-4 mb-5 pb-3 border-b-[1px] border-zinc-400;
+          @apply flex items-center gap-4 py-4 pl-2 border-b-[1px] border-zinc-400;
         }
          
         .chat h2{
@@ -30,15 +27,15 @@
         }
 
         .received_messages{
-          @apply  ml-1 flex justify-start mt-1 mb-2
+          @apply  pl-1 flex justify-start pt-1 pb-2 
         }
 
         .sent_messages{
-          @apply mr-1 flex justify-end mt-1
+          @apply pr-1 flex justify-end pt-1 text-white
         }
 
         .img-detail{
-        @apply w-[30px] rounded-[30px]
+          @apply w-[30px] rounded-[30px]
         }
 
         .user-img{
@@ -67,16 +64,24 @@
                 <li>
                   <img src="immagini/chat.png" class="img-detail"/>
                 </li>
-                <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                <li>
+                  <img src="immagini/done.png" class="img-detail"/>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        <div id="search-chat" class="flex bg-white mt-1 p-2 gap-4 items-center mb-2 border-b-[1px] border-zinc-400">
+        <div id="search-chat" class="flex bg-white pl-2 py-4 gap-4 items-center border-b-[1px] border-zinc-400">
           <div>
             <input type="search" class="bg-gray-200 pl-9 text-grat-400 w-[350px] h-[30px] rounded-[10px]" placeholder="Cerca o inizia nuova chat"/>
           </div>
           <img src="immagini/filter.png" class="w-[20px] h-[20px]" />
+        </div>
+        <div id="archived-chat" class="flex pl-2 pt-2 pb-4 h-[50px] items-center border-b-[1px] border-zinc-400">
+          <div class="flex gap-2">
+            <img src="immagini/archive.png" class="w-[25px] h-[25px]">
+            <p>Archiviate</p>
+          </div>
         </div>
         <div class="chat">
           <div class="flex flex-col">
@@ -93,17 +98,18 @@
           </div>
         </div>
         </div>
-        <div class="chat">
+        <div class="chat bg-gray-300">
           <div class="flex flex-col">
             <img src="immagini/ronaldo.jpg" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[9rem]">
+            <div class="flex justify-between gap-[9.5rem]">
             <h2>Cristiano Ronaldo</h2>
             <p class="time">11:45</p>
           </div>
           <div id="messaggio" class="flex justify-between">
             <p>adipisci velit impedit harum esse ipsa...</p>
+            <img src="immagini/done.png" class="w-[26px] h-[25px]">
           </div>
         </div>
         </div> 
@@ -112,7 +118,7 @@
             <img src="immagini/oshimen.jpg" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[10rem]">
+            <div class="flex justify-between gap-[10.5rem]">
             <h2>Victor Oshimen</h2>
             <p class="time">11:40</p>
           </div>
@@ -127,7 +133,7 @@
             <img src="immagini/bumstead.png" class="user-img" />
           </div>
           <div id="contacts">
-            <div class="flex justify-between gap-[10rem]">
+            <div class="flex justify-between gap-[10.2rem]">
             <h2>Chris Bumstead</h2>
             <p class="time">10:00</p>
           </div>
@@ -208,7 +214,7 @@
           <div class="flex gap-10">
             <img src="immagini/call.png" class="w-[30px]" />
             <img src="immagini/cam.png" class="w-[30px]" />
-            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <img src="immagini/done.png" class="img-detail"/>
           </div>
         </div>
 
@@ -236,16 +242,16 @@
         </div>
 
         <div id="footer-right" class="flex bg-white">
-          <div id="text-bar" class="flex bg-white p-3 mt-1 gap-4 items-center">
+          <div id="text-bar" class="flex bg-white p-6 gap-4 items-center">
             <div class="flex ml-2 gap-4">
               <img src="immagini/emoji.png" class="w-[30px] rounded-[50px]">
               <img src="immagini/clip.png" class="w-[30px] rounded-[50px]">
             </div>
             <div>
-              <input type="text" class="bg-gray-200 pl-9 text-grat-400 w-[740px] h-[30px] rounded-[10px]" placeholder="Scrivi un messaggio"/>
+              <input type="text" class="bg-gray-200 pl-9 text-grat-400 w-[720px] h-[30px] rounded-[10px]" placeholder="Scrivi un messaggio"/>
             </div>
             <img src="immagini/mic.png" class="w-[30px] rounded-[50px]" />
-            <img src="immagini/send.png" class="w-[30px] rounded-[50px]" />
+            <img src="immagini/send.png" class="img-detail" />
           </div>
         </div>
       </div>
