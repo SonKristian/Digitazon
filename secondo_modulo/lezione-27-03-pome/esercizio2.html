@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const buttons = document.querySelectorAll(".button");
+const display = document.querySelector("#display");
+const clearButton = document.querySelector("#clear");
+const calculateButton = document.querySelector("#calculate");
+
+let operand1 = "";
+let operand2 = "";
+let operator = "";
+let hasFirstOperand = false;
+let hasOperator = false;
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const value = button.value;
+
+    if (!isNaN(value)) {
+      if (!hasOperator) {
+        operand1 += value;
+        display.textContent = operand1;
+      } else {
+        operand2 += value;
+        display.textContent = operand2;
+      }
+    } else {
+      if (value === "=") {
+        if (operand1 !== "" && operand2 !== "" && operator !== "") {
+          const result = calculate(parseFloat(operand1), parseFloat(operand2), operator);
+          display.textContent = result;
+          operand1 = result.toString();
+          operand2 = "";
+          operator = "";
+          hasFirstOperand = true;
+          hasOperator = false;
+        }
+      } else if (value === "C") {
+        operand1 = "";
+        operand2 = "";
+        operator = "";
+        display.textContent = "";
+        hasFirstOperand = false;
+        hasOperator = false;
+      } else if (value === "+" || value === "-" || value === "*" || value === "/") {
+        if (!hasOperator) {
+          operator = value;
+          hasOperator = true;
+        }
+      }
+    }
+  });
+});
+
+clearButton.addEventListener("click", () => {
+  operand1 = "";
+  operand2 = "";
+  operator = "";
+  display.textContent = "0";
+  hasFirstOperand = false;
+  hasOperator = false;
+});
+
+calculateButton.addEventListener("click", () => {
+  if (operand1 !== "" && operand2 !== "" && operator !== "") {
+    const result = calculate(parseFloat(operand1), parseFloat(operand2), operator);
+    display.textContent = result;
+    operand1 = result.toString();
+    operand2 = "";
+    operator = "";
+    hasFirstOperand = true;
+    hasOperator = false;
+  }
+});
+
+function calculate(operand1, operand2, operator) {
+  let result;
+
+  switch (operator) {
+    case "+":
+      result = operand1 + operand2;
+      break;
+    case "-":
+      result = operand1 - operand2;
+      break;
+    case "*":
+      result = operand1 * operand2;
+      break;
+    case "/":
+      result = operand1 / operand2;
+      break;
+    default:
+      result = NaN;
+  }
+
+  return result;
+}
+</script>
+</body>
+</html>
