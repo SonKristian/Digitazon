@@ -12,9 +12,18 @@
     ogni valore stringa invertito (es 'ciao' diventa 'oaic', ...)
     */
 
-    let animals = ["cane", "gatto" , "criceto", "topo"]
-
+    let animals = ["cane", "gatto" , "criceto", "topo"];
+    let reverse = [];
+    let empty = " ";
     
+    for(let j=0; j < animals.length; j++){
+    for(let i=animals[j].length - 1; i >= 0 ; i--){
+         empty = empty + animals[j].charAt(i);
+        }
+        reverse.push(empty)
+        empty = " ";
+}
+console.log(reverse)
  </script>   
 </body>
 </html>

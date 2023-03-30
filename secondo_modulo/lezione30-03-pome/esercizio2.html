@@ -16,7 +16,8 @@
     let numbers = [1, 3, -5, 4, 10, -4, 8, 9, -2, 100]
     let cp=0;
     let cd=0;
-    let cn=0
+    let cn=0;
+    let cpo= 0;
     
     for(let i = 0; i< numbers.length -1; i++){
         if(numbers[i] %2==0){
@@ -26,10 +27,12 @@
         }
         if(numbers[i]<0){
           cn++
+        }else{
+          cpo++
         }
         
     }
-    console.log("contatore pari "+cp + " contatore dispari " +cd +" contatore negativo " +cn  )
+    console.log("contatore pari "+cp + " contatore dispari " +cd +" contatore negativo " +cn + "contatore positivo " + cpo)
  </script>   
 </body>
 </html>
