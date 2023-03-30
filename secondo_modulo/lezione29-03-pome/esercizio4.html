@@ -10,15 +10,24 @@
     <script>
         
         let name = ['mario', 'stefania', 'luca', 'lee']
-        let length_word = 0;
-        let max;
-        for(let i=0; i < name.length ; i++){
-            if(name[i].length >= length_word)
+        let length_word = name[0].length;
+        let max = name[0];
+
+        let result = [];
+        for(let i=0; i <= name.length - 1; i++){
+            if(name[i].length > length_word){
+            result = []
             length_word = name[i].length;
-            max = length_word;
+            max = name[i];
+            result.push[max];
+            }else if(name[i].length == length_word){
+                max = name[i];
+                result.push[max];
+            }
+            console.log(i + " " + result)
         }
 
-        console.log(max);
+        console.log(max)
     </script>
 </body>
 </html>
