@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* crea una funzione 'isPalindrome' che prende una stringa in ingresso e mi dice se è palindroma.
+Chiamare la funzione con i seguenti valori:
+- anna
+- itopinonavevanonipoti
+- ugo
+NON copiare algoritmi dal web (me ne accorgo 😉 )
+*/
+
+function isPalindrome(words){
+    let reverse = ""
+    for (let i = words.length - 1; i >= 0; i--) {
+            reverse = reverse + words.charAt(i);
+    }
+    if(reverse == words){
+        console.log("è palindromo")
+    }else{
+        console.log("non è palindromo")
+    }
+}
+
+isPalindrome("anna")
+isPalindrome("itopinonavevanonipoti")
+isPalindrome("ugo")
+    </script>
+</body>
+</html>

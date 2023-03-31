@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*creare una funzione 'ope' che prende in ingresso una stringa e due numeri.
+controlla il valore della stringa.
+Se è '+' restituisci la somma dei due numeri
+Se è '-' restituisci la differenza dei due numeri
+Se è '*' o 'x' restituisci la moltiplicazione dei due numeri
+Se è '/' restituisci la divisione dei due numeri
+altrimenti restituisci 0
+
+Chiama la funzione ope 4 volte variando ogni volta i valori utilizzati e stampa in console i risultati
+*/
+      function ope(math_ope, num1, num2) {
+        if (math_ope == "+") {
+          return num1 + num2;
+        } else if (math_ope == "-") {
+          return num1 - num2;
+        } else if (math_ope == "*") {
+          return num1 * num2;
+        } else if (math_ope == "/") {
+          return num1 / num2;
+        }else{
+          return 0
+        }
+      }
+
+      let operation = ope("+", 1, 2);
+      console.log(operation);
+
+      operation = ope("-", 7, 2);
+      console.log(operation);
+
+      operation = ope("*", 10, 6);
+      console.log(operation);
+
+      operation = ope("/", 14, 7);
+      console.log(operation);
+    </script>
+  </body>
+</html>

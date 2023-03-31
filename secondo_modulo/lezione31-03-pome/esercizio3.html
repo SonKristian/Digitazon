@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* crea una funzione 'xRayArray' che prende in ingresso un array e mi stampa:
+      - la lunghezza dell'array
+      - se l'array contiene SOLO numeri o meno
+      - se l'array è vuoto
+      - se è un array oppure un altro tipo di dato
+      La funzione NON restituisce nessun valore.
+      Chiamare la funzione con i seguenti valori:
+      - [10, 20, 30]
+      - []
+      - ['ciao', 100]
+      - 'ciao'
+      */
+
+
+      function xRayArray(array){
+
+      if(Array.isArray(array)) {
+          console.log("è un array ed è lungo " + array.length)
+          let countNum = 0
+          if(array.length == 0){
+              console.log("l'array è vuoto")
+          }else{
+              console.log("l'array non è vuoto")
+          for(let i = 0 ;  i < array.length; i++ ){
+          if(typeof array[i] == "number" ){
+                countNum++
+          }else{
+                countNum=0
+          }
+          if(countNum == array.length) {
+          console.log("Contiene solo numeri")
+          }else if(countNum == 0) {
+          console.log("Non contiene solo numeri")
+          }
+          }
+      }
+      } else {
+          console.log(" non è un array ed è lungo")
+      }
+
+      }
+
+      xRayArray([10, 20, 30])
+      xRayArray([])
+      xRayArray(['ciao', 100])
+      xRayArray(['ciao'])
+    </script>
+  </body>
+</html>
