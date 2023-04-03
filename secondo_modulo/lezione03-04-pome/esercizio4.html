@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+Ex 4
+creare una funzione treeStr che prende in ingresso una stringa che deve avere una lunghezza superiore pari
+ e superiore a 4 e stampa la seguente formattazione in output:
+
+treeStr('javascript') 
+           s
+          s c
+        a s c r
+      v a s c r i
+    a v a s c r i p
+  j a v a s c r i p t
+        */
+
+        function treeStr(word){
+            let tree = ""
+            let minlength = "    "
+            let sx = ""
+            let dx= ""
+           if(word >= minlength){
+            for (let i =0; i >= word.length; i++) {
+                for(let j=word.length; j <= word.length/2; j-- ){
+                   sx = sx + word.charAt(i)
+                   dx = dx + word.charAt(j)
+                    console.log(sx+dx)
+                }
+          }
+     
+          }else{
+            console.log("la parola deve essere uguale o maggiore di 4 caratteri")
+          }
+        }
+
+        treeStr('javascript') 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      creare una funzione checkArray che prende in ingresso un array di N numeri e stampa:
+      - quanti sono pari
+      - quanti sono dispari
+      - se contiene il numero 10
+      - se è un array o meno
+      chiamare con:
+      checkArray([90, 78, 45, 34])
+      checkArray([0, 0, 0])
+      checkArray([10])
+      checkArray(10)
+              */
+
+      function checkArray(array) {
+        let cp = 0;
+        let cd = 0;
+        let ten_check = false;
+        if (Array.isArray(array)) {
+          console.log("è un array");
+          for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+              cp++;
+            } else {
+              cd++;
+            }
+            if (array[i] == 10) {
+              ten_check = true;
+            } else {
+              ten_check = false;
+            }
+          }
+          console.log("contatore pari " + cp);
+          console.log("contatore dispari " + cd);
+          if (ten_check == true) {
+            console.log("contiene il numero 10");
+          } else {
+            console.log("non contiene il numero 10");
+          }
+        } else {
+          console.log("non è un array");
+        }
+      }
+
+      checkArray([90, 78, 45, 34]);
+      checkArray([0, 0, 0]);
+      checkArray([10]);
+      checkArray(10);
+    </script>
+  </body>
+</html>

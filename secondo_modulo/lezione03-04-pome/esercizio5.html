@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Ex 5
+Creare una funzione makeMatrix, che prende in ingresso un array di 10 numeri 
+a piacere compresi tra 1 e 10, e restituisce una matrice composta da due array,
+ uno in cui ci sono tutti i numeri pari o superiori a 6, uno in cui ci sono tutti i numeri inferiori a 6.
+Con la matrice restituita, stampare la media dei numeri pari o 
+superiori a 6 del primo array e la media dei numeri inferiori a 6 del secondo array.
+        */
+
+        function makeMatrix(array){
+            let higher_six = []
+            let lower_six = []
+            let matrix = [higher_six , lower_six]
+            let first_average = 0, second_average= 0
+            let permission = false
+            
+            for(let i=0; i < array.length ; i++){
+            if(array[i] > 10 || array[i]==0){
+                permission = false
+            }else{
+                permission = true
+            }
+
+            if(permission == true){
+                if(array[i] >=6){
+                   higher_six.push(array[i])
+                }else{
+                   lower_six.push(array[i])
+                }
+            }
+        }
+        console.log(matrix)
+
+        for(let i=0; i < higher_six.length ; i++){
+            first_average = first_average + higher_six[i]
+        }
+        first_average= first_average/ higher_six.length
+         
+        for(let i=0; i <lower_six.length ; i++){
+           second_average = second_average +lower_six[i]
+        }
+        second_average= second_average/lower_six.length
+
+       console.log("media uno " + first_average + "   "  + " media due " + second_average)
+    }
+        makeMatrix([1, 2, 3, 4, 5, 6, 7, 7, 7, 9])
+    </script>
+</body>
+</html>
