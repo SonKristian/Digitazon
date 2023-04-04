@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+realizzare la funzione uniqueArray che prende in ingresso un array 
+e rimuove tutti gli elementi duplicati, 
+restituendo un nuovo array privo quindi di valori duplicati.
+Chiamare la funzione con il valore [10, 'ciao', 20, 'ciao', 'javascript', 10] 
+e stampare in output il nuovo valore
+        */
+
+        function uniqueArray(array){
+            const set1 = new Set(array);
+            console.log(set1)
+         }
+        
+        array = [10, 'ciao', 20, 'ciao', 'javascript', 10]
+        uniqueArray(array)
+    </script>
+</body>
+</html>

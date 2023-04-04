@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        /*
+      /*
 Ex 1
 creare la funzione selector, che accetta una stringa in ingresso è in grado di stabilire 
 se è un selettore CSS valido (selettore semplice, senza annidamenti), tra:
@@ -23,28 +23,35 @@ selector('div')          -> è un selettore valido, di elemento div
 selector('paperino')  -> non è un selettore valido
 selector('ul')               -> non è un selettore valido (non è div, span o img)
         */
+      const allowedSelectors = ["div", "img", "span"];
+      const idSelector = "#";
+      const classSelector = ".";
+      const outputMessage = "E' un selettore valido, di ";
 
-        function selector(validator){
-            let s = input.length / 2 - 1
-
-for (let k = 0; k < input.length/2+1 ; k++) {
-    let a = ''
-    for (let i = 0; i < input.length; i++) {
-        if (i > (s - k) && i <= (s + k) || i == s) {
-            if (i == s && k == 0) {
-                a += ' '
+      function selector(selector) {
+        let allowed = false;
+        let allowedSelector = "";
+        if (selector.charAt(0) == ".") {
+          console.log(outputMessage + "classe");
+        } else if (selector.charAt(0) == "#") {
+          console.log(outputMessage + "id");
+        } else {
+          for (let i = 0; i < allowedSelectors.length; i++) {
+            if (selector == allowedSelectors[i]) {
+              allowed = true;
+              allowedSelector = allowedSelectors[i];
             }
-            a += ' ' + input[i] + ' '
-        }
-        else
-            a += '   '
-    }
-    console.log(a);
-}
-}
+          }
 
-let string = 'javascript'
-treeStr(string)
+          if (allowed == true) {
+            console.log(outputMessage + "elemento " + allowedSelector);
+          } else {
+            console.log("Non e' un selettore valido!");
+          }
+        }
+
+        console.log(separator);
+      }
     </script>
-</body>
+  </body>
 </html>

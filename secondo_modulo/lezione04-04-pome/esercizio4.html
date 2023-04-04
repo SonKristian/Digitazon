@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+realizzare due istanze di Map che rappresentano due studenti che abbiano la seguente struttura:
+- name, lastname, rates 
+dove name e lastname sono stringhe e rates è un array di 5 numeri
+assegnare valori a piacere per ogni chiave,
+ es mario rossi 4, 5, 6, 4, 3 e luigi verdi 8, 7, 4, 9, 9
+creare la funzione bestStudent, che prende in ingresso due mappe 
+che rappresentano uno studente, e restituisce il nome e il cognome dello studente
+ che ha la media voto migliore tra i due.
+Richiamare questa funzione passando le due mappe create precedentemente
+        */
+
+      const studente1 = new Map();
+      studente1.set("name", "Cristian");
+      studente1.set("lastname", "Di Napoli");
+      studente1.set("rates", [10, 9, 8, 9, 10]);
+
+      const studente2 = new Map();
+      studente2.set("name", "Gabriele");
+      studente2.set("lastname", "Notonica");
+      studente2.set("rates", [10, 10, 10, 10, 10]);
+
+      function bestStudent(studente1, studente2) {
+        let media_s1 = 0;
+        let media_s2 = 0;
+
+        for (let i = 0; i < studente1.get("rates").length; i++) {
+          media_s1 += studente1.get("rates")[i];
+        }
+          media_s1 = media_s1 / studente1.get("rates").length;
+
+        for (let i = 0; i < studente2.get("rates").length; i++) {
+          media_s2 += studente2.get("rates")[i];
+        }
+          media_s2 = media_s2 / studente2.get("rates").length;
+
+        if (media_s1 > media_s2) {
+          console.log(studente1.get("name") + " " + studente1.get("lastname"));
+        } else if (media_s1 < media_s2) {
+          console.log(studente2.get("name") + " " + studente2.get("lastname"));
+        } else if (media_s1 == media_s2) {
+          console.log("Questi due studenti hanno la stessa media:");
+          console.log(studente1.get("name") + " " + studente1.get("lastname") + "e" + studente2.get("name") + " " + studente2.get("lastname"));
+        }
+      }
+
+      bestStudent(studente1, studente2);
+    </script>
+  </body>
+</html>

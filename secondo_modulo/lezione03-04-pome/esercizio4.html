@@ -22,27 +22,27 @@ treeStr('javascript')
   j a v a s c r i p t
         */
 
-        function treeStr(word){
-            let tree = ""
-            let minlength = "    "
-            let sx = ""
-            let dx= ""
-           if(word >= minlength){
-            for (let i =0; i >= word.length; i++) {
-                for(let j=word.length; j <= word.length/2; j-- ){
-                   sx = sx + word.charAt(i)
-                   dx = dx + word.charAt(j)
-                    console.log(sx+dx)
-                }
-          }
-     
-          }else{
-            console.log("la parola deve essere uguale o maggiore di 4 caratteri")
-          }
-        }
+        function selector(validator){
+            let s = input.length / 2 - 1
 
-        treeStr('javascript') 
-        
+for (let k = 0; k < input.length/2+1 ; k++) {
+    let a = ''
+    for (let i = 0; i < input.length; i++) {
+        if (i > (s - k) && i <= (s + k) || i == s) {
+            if (i == s && k == 0) {
+                a += ' '
+            }
+            a += ' ' + input[i] + ' '
+        }
+        else
+            a += '   '
+    }
+    console.log(a);
+}
+}
+
+let string = 'javascript'
+treeStr(string)
     </script>
 </body>
 </html>

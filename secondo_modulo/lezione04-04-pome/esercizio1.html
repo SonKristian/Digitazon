@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+creare una funzione compareMap che accetta in ingresso due mappe.
+La funzione restituisce true SE le due mappe sono mappe, 
+SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori. 
+Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata, 
+e due mappe uguali nella seconda chiamata
+        */
+
+      function compareMap(map1, map2) {
+        let checker = false;
+        if (map1 instanceof Map == true && map2 instanceof Map == true) {
+          console.log("Sono due mappe");
+          if (map1.size == map2.size) {
+            checker = true;
+          } else {
+            checker = false;
+          }
+          let text = "";
+          map1.forEach(function (v, k) {
+            text += k + " = " + v;
+          });
+          let text2 = "";
+          map2.forEach(function (v, k) {
+            text2 += k + " = " + v;
+          });
+          if (text == text2) {
+            checker = true;
+          } else {
+            checker = false;
+          }
+        } else {
+          console.log("Non sono due mappe");
+          checker = false;
+        }
+
+        if (checker == true) {
+          console.log(checker);
+        } else {
+          console.log(checker);
+        }
+      }
+
+      const map1 = new Map();
+      map1.set("name", "Mario");
+      map1.set("lastname", "Rossi");
+
+      const map2 = new Map();
+      map2.set("name", "Mario");
+      map2.set("lastname", "Rossi");
+
+      compareMap(map1, map2);
+    </script>
+  </body>
+</html>
