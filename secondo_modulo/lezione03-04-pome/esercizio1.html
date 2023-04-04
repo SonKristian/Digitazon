@@ -25,11 +25,26 @@ selector('ul')               -> non è un selettore valido (non è div, span o i
         */
 
         function selector(validator){
-            let array = [".", "#", "div", "span", "img"]
-            for (let i= 0; i < array.length; i++){
-                if(validator == )
+            let s = input.length / 2 - 1
+
+for (let k = 0; k < input.length/2+1 ; k++) {
+    let a = ''
+    for (let i = 0; i < input.length; i++) {
+        if (i > (s - k) && i <= (s + k) || i == s) {
+            if (i == s && k == 0) {
+                a += ' '
             }
+            a += ' ' + input[i] + ' '
         }
+        else
+            a += '   '
+    }
+    console.log(a);
+}
+}
+
+let string = 'javascript'
+treeStr(string)
     </script>
 </body>
 </html>
