@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box">Cornuto Alpha Gabriele</div>
+    <script>
+      /*
+        creare una mappa che rappresenta 5 stili CSS a piacere e stamparla in output.
+        Creare la funzione showCSS che prende in ingresso
+        la precedente mappa e stampa tutti i suoi elementi.
+    */
+
+      const map1 = new Map([
+        ["height", "600px"],
+        ["width", "600px"],
+        ["background-color", "black"],
+        ["display", "flex"],
+        ["color", "red"]
+      ]);
+        
+      const box = document.getElementById('box')
+        box.style.width = map1.get('width')
+        box.style.height = map1.get('height')
+        box.style.backgroundColor = map1.get('background-color')
+        box.style.display = map1.get('display')
+        box.style.color = map1.get('color')
+        
+      function showCSS(map1) {
+        console.log(map1)
+      }
+
+      showCSS(map1)
+    </script>
+  </body>
+</html>
