@@ -24,17 +24,12 @@
           num2 = array2[0];
         let diff = 0;
 
-        if (
-          array1.length >= min_length &&
-          array1.length <= max_length &&
-          array2.length >= min_length &&
-          array2.length <= max_length
-        ) {
+        if ((array1.length >= min_length && array1.length <= max_length) && (array2.length >= min_length && array2.length <= max_length)) {
           for (let i = 0; i <= max_length; i++) {
-            if (num1 < array1[i]) {
+            if (num1 <= array1[i]) {
               num1 = array1[i];
             }
-            if (num2 > array2[i]) {
+            if (num2 >= array2[i]) {
               num2 = array2[i];
             }
           }
