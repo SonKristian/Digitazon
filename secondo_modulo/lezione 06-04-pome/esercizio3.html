@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+creare, a piacere, due letterali oggetto, che descriveranno rispettivamente:
+- uno studente (avrà nome, cognome, età, voti, un metodo per calcolare 
+e stampare la sua media voti, un metodo per stabilire se è maggiorenne o meno)
+- un'automobile (avrà modello, marca, prezzo e tipoMotore. 
+tipoMotore a sua volta avrà cilindrata, tipo (benzina, diesel o elettrico) e cv. 
+L'automobile avrà un metodo printInfo che stampa in modo correttamente formattato e leggibile le sue feature
+richiamare i metodi dei due oggetti per stampare in output i risultati
+        */
+
+        const student = {
+                name : "Cristian",
+                lastname : "Di Napoli",
+                age : 20,
+                rate : [7, 7, 7, 7, 7],
+                average_student: function(rate){
+                    let average = 0
+                    for(let i = 0; i<this.rate.length; i++){
+                           average = average+ this.rate[i]
+                    }
+                    average = average / this.rate.length
+                    console.log("la media è " + average)
+                },
+                full_age : function (age) {
+                    if(this.age >= 18){
+                        console.log("l'alunno è maggiorenne")
+                    }else{
+                        console.log("l'alunno è minorenne ")
+                    }
+                }
+        }
+
+        const car = {
+          model : "RS 3",
+          brand : "Audi",
+          price : 65000,
+          type_engine : {
+            displacement : 5,
+            type : "diesel",
+            cv : 407
+             },
+
+          printInfo : function(){
+            return `la ${this.brand} ${this.model} ha ${this.price} e ${car.type_engine.displacement} cavalli e funziona con ${car.type_engine.type} e ha ${car.type_engine.cv} cavalli`
+        }
+    }
+
+        function student_method(student) {
+            console.log( 'Queste sono le info di ' + student.name + " " + student.lastname );
+            student.average_student()
+            student.full_age()
+            console.log('----------------------------------');
+        }
+
+        student_method(student)
+        console.log(car.printInfo())
+    </script>
+</body>
+</html>

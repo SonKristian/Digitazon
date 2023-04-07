@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+Creare una funzione parseShape che prende in ingresso un oggetto che abbia questo template:
+{ x: number, y: number, name: string }
+e produca un ouput relativo ad area e perimetro, in base al valore della proprietà name che stabilisce il tipo di figura geometrica in uso.
+Richiamare la funzione due volte con:
+
+const quadrato = {x: 5, x:4, shape: 'square'}
+const rettangolo = {x: 5, x:4, shape: 'rectangle'}
+per stampare area e perimetro di quadrato e rettangolo.
+        */
+        const obj1 = {
+            x : 5,
+            y: 4,
+            name : "square",
+            area_perimeter: function(x , y){
+                console.log("il perimetro del " +this.name+ " è " + this.x*4);
+                console.log("l'area del " +this.name+ " è " + this.x*this.x);
+            }
+        }
+
+        const obj2 = {
+            x : 5,
+            y: 4,
+            name : "rectangle",
+            area_perimeter: function(x , y){
+                console.log("l'area del " +this.name+ " è " +((this.x*2)+(this.y*2)));
+                console.log("l'area del " +this.name+ " è " + this.x*this.y);
+            }
+        }
+
+        function parseShape(obj){
+            console.log( 'Queste sono le info di ' + obj.name );
+            obj.area_perimeter()
+            console.log('----------------------------------');
+        }
+
+        parseShape(obj1)
+        parseShape(obj2)
+    </script>
+</body>
+</html>
