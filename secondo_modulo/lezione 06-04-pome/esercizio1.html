@@ -46,11 +46,11 @@ salvarlo in un template string, parsarlo con l'apposita strategia e stabilire al
       
       const jsonObject = JSON.parse( jsonString );
 
-      function bestStudent(obj) {
+      function bestStudent(jsonObject) {
   let bestStudentName = "";
   let bestAvg = 0;
-  for (let i = 0; i < obj.length; i++) {
-    const userGrade = obj[i].rate;
+  for (let i = 0; i < jsonObject.length; i++) {
+    const userGrade = jsonObject[i].rate;
     let grades = 0;
     for (let i = 0; i < userGrade.length; i++) grades = grades + userGrade[i];
 
@@ -58,7 +58,7 @@ salvarlo in un template string, parsarlo con l'apposita strategia e stabilire al
 
     if (avg > bestAvg) {
       bestAvg = avg;
-      bestStudentName = obj[i].fullname;
+      bestStudentName = jsonObject[i].fullname;
     }
   }
   console.log(
@@ -68,6 +68,8 @@ salvarlo in un template string, parsarlo con l'apposita strategia e stabilire al
       bestAvg
   );
 }
+
+bestStudent(jsonObject)
     </script>
   </body>
 </html>
