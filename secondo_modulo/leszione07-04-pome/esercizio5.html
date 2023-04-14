@@ -17,8 +17,15 @@ creare uno script a piacere in cui si dimostra l'uso di:
 - funzione che accetta una funzione
 - this
         */
-
-
+        function T() { return true }
+function F() { return false }
+function and(sx, dx) {
+  return function() { return sx() && dx() }
+}
+function or(sx, dx) {
+  return function() { return sx() || dx() }
+}
+console.log(and(or(F, T), T)())
 </script>
 
 </body>
