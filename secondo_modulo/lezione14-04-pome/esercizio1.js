@@ -25,3 +25,4 @@ function chessboard(num){
 }
 
 console.log(chessboard(3))
+
