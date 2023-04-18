@@ -24,4 +24,7 @@ function zigzag(string, rows){
             step = 1
         }
     }
+    return rowsArray.join("")
 }
+
+console.log(zigzag("PAYPALISHIRING",3))
