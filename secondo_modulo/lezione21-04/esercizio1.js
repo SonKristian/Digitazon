@@ -50,3 +50,41 @@ arr.forEach(function(element){
 
 
 })
+
+/*
+let ar = [ {x:10,y:5}, 100, 'javascript', new Map([['label','sono una mappa']]), [40,50,60] ]
+
+        ar.forEach((el)=>{
+
+            // check mappa
+            if (el instanceof Map){
+                console.log( el.has('label') ? el.get('label') : 'no label property found' );
+                return
+            }
+
+            // check array
+            if( Array.isArray(el) ){
+                console.log('sono un array - stampo numeri in ordine inverso');
+                for (let i = el.length-1; i >=0; i--) console.log(el[i]);
+
+                return
+            }
+
+            // check stringa, numero, oggetto
+            switch( typeof el ) {
+                case 'string':
+                    console.log('sono una stringa - primo carattere = '+el[0])
+                    return
+
+                case 'number':
+                    console.log( (el > 100) ? 'numero - red' : 'numero - blue') 
+                    return
+
+                case 'object':
+                    console.log('oggetto - somma proprietà = '+ (el.x+el.y))
+                    return
+            }
+
+        })
+
+*/
