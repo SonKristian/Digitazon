@@ -78,7 +78,7 @@ function crazyString(text) {
   }
 
   for (let i = 0; i < subj.length; i++) {
-    if (check_text == subj[i]) {
+    if (check_text !== subj[i]) {
       checkSubject = true
     } else {
       checkSubject = false
@@ -115,4 +115,4 @@ if(checkCthulhu==false && checkSubject == true && checkPunct == false && checkLa
 }
 }
 
-console.log(crazyString(".Quando guardi a lungo nell’abisso, l’abisso ti guarda dentro."));
+console.log(crazyString("Lui è pazzo"));
