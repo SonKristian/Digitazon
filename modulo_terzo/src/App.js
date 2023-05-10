@@ -1,6 +1,5 @@
-// import { Fetch } from './components/fetch';
-import { Prova } from './components/hook';
-import { ProvaDue } from './components/hookDue';
+// import { Chat } from './components/chat'
+// import { ToDo } from './components/todolist'
 import logo from './logo.svg';
 import './App.css';
 
@@ -21,9 +20,9 @@ function App() {
           Learn React
         </a>
       </header>
-      {/* <Fetch></Fetch> */}
-      <Prova></Prova>
-      <ProvaDue></ProvaDue>
+      {/* <Chat></Chat> */}
+      {/* <ToDo></ToDo> */}
+  
     </div>
   );
 }

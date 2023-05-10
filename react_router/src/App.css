@@ -36,23 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.line-chat{
-  text-align: center;
-  display: flex;
-}
-
-.father{
-  flex-direction: column;
-  display: flex
-}
-
-.checked-todo{
-  display: flex;
-  order: 2;
-  opacity:  0.4;
-}
-
-.not-checked{
-  display: flex;
-}
