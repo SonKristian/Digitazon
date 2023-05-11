@@ -2,6 +2,7 @@
 // import { ToDo } from './components/todolist'
 import logo from './logo.svg';
 import './App.css';
+import { InputText } from './components/easyExercise';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
       </header>
       {/* <Chat></Chat> */}
       {/* <ToDo></ToDo> */}
-  
+      <InputText />
     </div>
   );
 }
