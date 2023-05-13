@@ -4,12 +4,12 @@ quando l'input e' vuoto oppure ha dentro solo dei numeri, oppure solo della punt
 Quando la pagina carica non deve subito partire dal rosso, ma arrivarci solo dopo che l'utente ha scritto qualcosa.
 */
 
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 
-export function InputText(){
-let arr = [".", ",", "-", "_", "?", "!", "'"]
+// export function InputText(){
+// let arr = [".", ",", "-", "_", "?", "!", "'"]
 
-return(
-    
-)
-}
+// return(
+
+// )
+// }

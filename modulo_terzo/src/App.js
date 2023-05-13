@@ -2,7 +2,7 @@
 // import { ToDo } from './components/todolist'
 import logo from './logo.svg';
 import './App.css';
-import { InputText } from './components/easyExercise';
+// import { InputText } from './components/easyExercise';
 import { Board } from './components/tictactoe'
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
       </header>
       {/* <Chat></Chat> */}
       {/* <ToDo></ToDo> */}
-      <InputText />
+      {/* <InputText /> */}
       <Board />
     </div>
   );
