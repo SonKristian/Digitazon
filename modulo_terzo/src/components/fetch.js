@@ -9,6 +9,7 @@ export function Fetch() {
        let json = await res.json()
        setProduct(json) 
     }
+    
     fetchProducts()
      }, [products]);
   return (
