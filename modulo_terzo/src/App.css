@@ -148,5 +148,9 @@ body {
 }
 
 .red-border:focus{
-border: red;
+border: 0px;
+}
+
+.red-border{
+  border: 2px solid red;
 }
