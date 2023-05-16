@@ -4,7 +4,7 @@
 // Mostrare un esempio di utilizzo.
 // Ad esempio <AsyncCall callback={fn} url={url} />
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 function Fetch({URL,setRes}){
 

@@ -154,3 +154,7 @@ border: 0px;
 .red-border{
   border: 2px solid red;
 }
+
+button{
+  color: black;
+}
