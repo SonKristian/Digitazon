@@ -2,20 +2,17 @@ import logo from "./logo.svg";
 import "./App.css";
 // App.js
 import { Routes, Route } from "react-router-dom";
-import PostMain from "./components/PostMain";
-import NavBar from "./components/navbar";
+import Post from "./components/Post";
+import Home from "./Home";
 
 
 function App() {
   return (
     <>
-      <NavBar />
       <Routes>
-        {/* <Route exact path="/" component={Home} /> */}
-        {/* <Route path="/post/:id" component={NumberPost} /> */}
-        <Route path="/Post/:id" component={PostMain} />
+        <Route path="/" element={<Home />} />
+        <Route path="/posts/:id" element={<Post />} />
       </Routes>
-      <PostMain />
     </>
   );
 }

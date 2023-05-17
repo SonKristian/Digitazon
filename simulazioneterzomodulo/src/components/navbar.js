@@ -1,60 +1,37 @@
-// Components/NavBar.js
-import { Link, Outlet } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import PostLink from './PostLink';
+import React from "react";
+import { useState, useEffect } from "react";
+import PostLink from "./PostLink";
+import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const NavBar = ({id}) => {
+const NavBar = ({ id }) => {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    async function getAllPost() {
+      const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+      let json = await res.json();
+      setPosts(json);
+    }
+    getAllPost(id);
+  }, [id]);
 
-    const [post, setPost] = useState([]);
-    useEffect(() => {
-      async function getAllPost(id) {
-        const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-        let json = await res.json();
-        setPost(json);
-      }
-      getAllPost(id)
-    }, [id]);
-
- return (
-<div className='sidebar'>
-    <nav>
-       <ul>
-        {post.map((post)=>
-         post.id <=5 ? (
-            <PostLink key={post.id} id={post.id} />
-        ): ""
-        )};
-          <li>
-            <div className='box'>
-             <Link to="/Post">Post</Link>
-             {/* <Link to={`/post/${post.id}`}>{post.title}</Link> */}
-             </div>
-          </li>
-          <li>    
-          <div className='box'>
-             <Link to="/Post">Post</Link>
-             </div>
-          </li>
-          <li>
-          <div className='box'>
-          <Link to="/Post">Post</Link>
+  return (
+    <div className="sidebar">
+      <nav>
+        <ul>
+          <div className="box">
+            <li>
+              <Link to="/Home">Home</Link>
+            </li>
           </div>
-          </li>
-          <li>
-          <div className='box'>
-          <Link to="/Post">Post</Link>
-          </div>
-          </li>
-          <li>
-          <div className='box'>
-          <Link to="/Post">Post</Link>
-          </div>
-          </li>
-       </ul>
-    </nav>
-    <Outlet />
-</div>
- );
+          {posts.map((post) =>
+            post.id < 6 ? <PostLink key={post.id} id={post.id} /> : ""
+          )}
+        </ul>
+      </nav>
+      <Outlet />
+    </div>
+  );
 };
 
 export default NavBar;

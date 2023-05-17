@@ -1,19 +1,28 @@
 import { useState, useEffect } from "react";
 
-const post_comments = "https://jsonplaceholder.typicode.com/posts/1/comments";
-
-
 const PostMain = ({ id }) => {
-+
 
+  const [post, setPost] = useState({});
+  useEffect(() => {
+    async function getPost(id) {
+      const res = await fetch(
+        `https://jsonplaceholder.typicode.com/posts/${id}`
+      );
+      const data = await res.json();
+      setPost(data);
+    }
+    getPost(id);
+  }, [id]);
   return (
-    <main>
-        <h1>{post.title}</h1>
+    <div >
+      <h1 >{post.title}</h1>
         <div>
-            <p>{post.body}</p>
-        </div>
-    </main>
+          <h2>User Number {post.userId}</h2>
+          <p> day ago</p>
+      </div>
+      <p>{post.body}</p>
+    </div>
   );
-}
+};
 
 export default PostMain;

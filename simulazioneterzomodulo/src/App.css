@@ -62,6 +62,10 @@ ul li{
   margin-bottom: 3rem;
 }
 
+ul div {
+  margin-bottom: 3rem;
+}
+
 .sidebar > nav {
   margin-right: 25px;
 }
