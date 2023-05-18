@@ -1,5 +1,4 @@
 import {useState} from "react"
-import {  OpenAIApi } from '@openai/api';
 
 const Body = () => {
     const [text, setText] = useState("")
@@ -7,18 +6,29 @@ const Body = () => {
     
     const ResponseGpt = async (text) => {
     //key rappresenta la chiave per far funzionare gpt
-    const key = new OpenAIApi("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");
+    const key = "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";
     //openai rappresenta il "server" che prende la richiesta
-    const url = "https://api.openai.com/v1/chat/completions    ";
+    const url = "https://api.openai.com/v1/engines/davinci-codex/completions";
 
     //esegue una richiesta ad OpenAi, salva la risposta nella variabile res
 
-    const res = await key.complete({
-    engine: 'davinci-codex', // Specifica l'engine di ChatGPT da utilizzare
-    prompt: text,
-    maxTokens: 50,
-    temperature: 0.6,
-    n: 1,
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type" : "application/json", // indica che il corpo della richiesta è un oggetto JSON
+        Authorization : `${key}`, //Berear rappresenta il tipo del token
+      },
+      body: JSON.stringify({
+        // per trasformare l'oggetto di configurazione in una stringa JSON
+        prompt: text,
+        stream: true,
+        max_tokens: 1000,
+        model: 'gpt-3.5-turbo',
+        temperature: 0.8,
+        top_p: 1,
+        presence_penalty: 1,
+        message,
+      }),
     });
     const json = await res.json();
 
