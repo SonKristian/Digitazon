@@ -6,6 +6,7 @@ import './App.css';
 // import { Board } from './components/tictactoe'
 // import { ProductColumns } from './components/productColumns';
 import { NotClickButton } from './components/buttonClick';
+import RgbExercise from './components/RgbExercise';
 // import ListaPuntata from './components/listaPuntata';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       {/* <ProductColumns /> */}
       {/* <ListaPuntata /> */}
       <NotClickButton />
+      <RgbExercise />
     </div>
   );
 }
