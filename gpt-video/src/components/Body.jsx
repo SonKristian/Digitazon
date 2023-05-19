@@ -1,12 +1,13 @@
 import {useState} from "react"
 
+
 const Body = () => {
     const [text, setText] = useState("")
     const [message, setMessage]= useState([])    
     
     const ResponseGpt = async (text) => {
     //key rappresenta la chiave per far funzionare gpt
-    const key = "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";
+    const key = "api-key";
     //openai rappresenta il "server" che prende la richiesta
     const url = "https://api.openai.com/v1/engines/davinci-codex/completions";
 
