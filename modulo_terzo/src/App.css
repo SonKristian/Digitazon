@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 1500px;
+  height: 1500px;
 }
 
 .App-logo {
@@ -157,4 +159,13 @@ border: 0px;
 
 button{
   color: black;
+}
+
+.change{
+  position: absolute;
+}
+main{
+  background-color:  red;
+  width: 700px;
+  height: 700px;
 }
