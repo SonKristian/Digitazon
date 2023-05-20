@@ -7,6 +7,7 @@ import './App.css';
 // import { ProductColumns } from './components/productColumns';
 import { NotClickButton } from './components/buttonClick';
 import RgbExercise from './components/RgbExercise';
+import InputLabel from './components/InputLabel';
 // import ListaPuntata from './components/listaPuntata';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       {/* <ListaPuntata /> */}
       <NotClickButton />
       <RgbExercise />
+      <InputLabel />
     </div>
   );
 }
