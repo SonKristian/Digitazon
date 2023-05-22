@@ -1,7 +1,9 @@
 import autoAnimate from "@formkit/auto-animate"
 import { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 
-const ChatBody = ({ chat }) => {
+const ChatBody = (props) => {
+  const { chat } = props;
   const aiStyle =
     "bg-white bg-opacity-40 backdrop-blur-lg dropshadow-md mr-auto";
  
@@ -38,4 +40,7 @@ const ChatBody = ({ chat }) => {
   );
 };
 
+ChatBody.propTypes = {
+ chat: PropTypes.string.isRequired, // Add the missing prop type validation
+};
 export default ChatBody;

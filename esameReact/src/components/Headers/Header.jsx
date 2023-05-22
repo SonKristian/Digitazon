@@ -1,0 +1,36 @@
+import HeaderDown from "./HeaderDown"
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+const Header = () => {
+  return (
+    <header >
+        <nav className="bg-slate-950">
+            <div className="flex items-center">
+            <a href="https://www.amazon.it">
+            <img src=".\src\assets\logo.png" alt="logo" className="w-[70px] m-[2rem]"/>
+          </a>
+            </div>
+            <div className="search-icon-bar ">
+            <input type="search" id="searchbar" placeholder="Search for your product" className="w-[600px] rounded-s-lg h-[40px] m-[0.4rem]" />
+            <button className="btn-container" type="button"><SearchIcon /></button>
+            </div>
+        <div className="form">
+          <a href="login.html">
+            <button className="btn-container-form" type="button">Login</button>
+          </a>
+          <a href="register.html">
+            <button className="btn-container-form" type="button">Registrazioni</button>
+          </a>
+        </div>
+        <div className="cart">
+        <button className="btn-container" type="button"><ShoppingCartIcon /></button>
+        </div>
+        </nav>
+        <HeaderDown />
+    </header>
+
+  )
+}
+
+export default Header
