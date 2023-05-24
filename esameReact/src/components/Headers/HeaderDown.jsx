@@ -1,18 +1,31 @@
+import { useState, useEffect } from "react"
 
 const HeaderDown = () => {
+  const [categories, setCategories] = useState([]); 
+
+  useEffect(() => {
+    async function getCategories() {
+      const response = await fetch("https://dummyjson.com/products/categories");  
+      const data = await response.json();
+      const categoriesSliced = data.slice(0, 10);
+      setCategories(categoriesSliced); 
+    }
+
+    getCategories(); 
+  }, [])
   return (
-    <nav id="header-down" className="bg-slate-800">
-        <ul id="submenu">
-          <li></li>
-          <li>
-            <a href="cart.html">Carrello</a>
-          </li>
-          <li><a href="">Buoni regalo</a></li>
-          <li><a href="">Acquista di nuovo</a></li>
-          <li><a href="">Offerte</a></li>
-          <li><a href="">Idee regalo</a></li>
-          <li><a href="homepage.html">Vinili</a></li>
+    <nav >
+        <div
+        id="header-down" className="bg-slate-800 0 text-white"
+      >
+         <ul id="submenu" className="gap-7">
+          {categories.map((category, index) => (
+            <li key={index} className="mr-4 hover:underline cursor-pointer">
+              {category.toUpperCase()}
+            </li>
+          ))}
         </ul>
+      </div>
       </nav>
   )
 }
