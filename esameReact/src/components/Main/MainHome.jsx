@@ -20,7 +20,6 @@ const MainHome = () => {
           {products.map((product, index) => (
             <Cards key={index} product={product}/>
           ))}
-
     </div>
   );
 };

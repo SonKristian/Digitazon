@@ -2,7 +2,7 @@ import HeaderDown from "./HeaderDown"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Searchbar from "./SearchBar";
 
-const Header = () => {
+const Header = ({Search}) => {
 
   return (
     <header >
@@ -12,8 +12,8 @@ const Header = () => {
             <img src=".\src\assets\logo.png" alt="logo" className="w-[70px] m-[2rem]"/>
           </a>
             </div>
-              <Searchbar  />
-        <div className="form">
+              <Searchbar Search={Search}/>
+              <div className="form">
           <a href="login.html">
             <button className="btn-container-form" type="button">Login</button>
           </a>

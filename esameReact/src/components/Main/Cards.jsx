@@ -1,7 +1,6 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Cards = ({product}) => {
-
    return (
            <div key={product.id} className="card">
            <h2>{product.title}</h2>

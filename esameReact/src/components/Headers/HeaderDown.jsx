@@ -15,9 +15,7 @@ const HeaderDown = () => {
   }, [])
   return (
     <nav >
-        <div
-        id="header-down" className="bg-slate-800 0 text-white"
-      >
+        <div id="header-down" className="bg-slate-800 0 text-white">
          <ul id="submenu" className="gap-7">
           {categories.map((category, index) => (
             <li key={index} className="mr-4 hover:underline cursor-pointer">
