@@ -1,5 +1,5 @@
 import caseCinematografiche from "./db/case_cinematografiche.json" assert { type: 'json' }
-
+import film from "./db/film.json" assert { type: 'json' }
 // devo fornire al server l'informazione dell'id piu' grande
 // esistente all'interno di case-cinematografiche.json
 // perche' abbiamo bisogno di tenerne traccia per via
@@ -48,6 +48,12 @@ const cCDelete = (req, res) => {
     res.status(404).end()
   } else {
     caseCinematografiche.splice(index, 1)
+
+    for (let i = 0; i < film.length; i++) {
+      if (req.params.id == film[i].casaProduzione) {
+        film.splice(i, 1)
+      }
+    }
     res.status(200).end()
   }
 }
@@ -66,7 +72,7 @@ const cCPost = (req, res) => {
   caseCinematografiche.push({ ...req.body, ...{ id: NEXT_ID } })
   res.status(200).end()
 
-  res.status(400).end()
+  //res.status(400).end()
 }
 
 export {

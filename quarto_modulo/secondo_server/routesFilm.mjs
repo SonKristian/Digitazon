@@ -7,6 +7,12 @@ const cCFilms = (req, res) => {
     res.send(filtered)
 }
 
+const fFGet =(req, res) =>{
+
+    res.send(film)
+}
+
 export {
-    cCFilms
+    cCFilms,
+    fFGet
 }
