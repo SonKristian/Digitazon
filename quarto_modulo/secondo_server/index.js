@@ -1,46 +1,30 @@
 import { 
   hello, 
-  cCRicerca, 
   cCGet, 
+  cCResearch, 
   cCGetId, 
-  cCDeleteCasa, 
+  cCDelete, 
   cCModify, 
-  cCPost 
-} from './routes.mjs'
-const express = require('express')
+  cCPost
+} from './routesCC.mjs'
+import { cCFilms } from './routesFilm.mjs'
+import express from 'express'
 const app = express()
-const bodyParser = require('body-parser')
+import  bodyParser from 'body-parser'
 app.use(bodyParser.json())
 const port = 3000
 
-const caseCinematografiche = require("./case_cinematografiche.json")
-
-// devo fornire al server l'informazione dell'id piu' grande
-// esistente all'interno di case-cinematografiche.json
-// perche' abbiamo bisogno di tenerne traccia per via
-// delle POST
-
-// non lo faccio cosi perche' e' "debole" come implementazione
-// potrebbe succedere che non c'e' un legame diretto
-// tra posizione dell'i-esimo elemento e suo id
-// const id = caseCinematografiche[caseCinematografiche.length - 1].id
-
-let NEXT_ID = caseCinematografiche
-  .reduce((bigger, c) => c.id > bigger ? c.id : bigger, -1)
 
 app.get('/', hello)
 
 app.get('/case-cinematografiche', cCGet)
-
-app.get('/case-cinematografiche/ricerca/:termine', cCRicerca)
-
+app.get('/case-cinematografiche/ricerca/:termine', cCResearch)
 app.get('/case-cinematografiche/:id', cCGetId)
-
-app.delete('/case-cinematografiche/:id', cCDeleteCasa)
-
+app.delete('/case-cinematografiche/:id', cCDelete)
 app.put('/case-cinematografiche/:id', cCModify)
-
 app.post("/case-cinematografiche", cCPost)
+
+app.get('/case-cinematografiche/:id/films', cCFilms)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
