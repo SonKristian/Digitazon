@@ -1,3 +1,12 @@
+import { 
+  hello, 
+  cCRicerca, 
+  cCGet, 
+  cCGetId, 
+  cCDeleteCasa, 
+  cCModify, 
+  cCPost 
+} from './routes.mjs'
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -19,72 +28,19 @@ const caseCinematografiche = require("./case_cinematografiche.json")
 let NEXT_ID = caseCinematografiche
   .reduce((bigger, c) => c.id > bigger ? c.id : bigger, -1)
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get('/', hello)
 
-app.get('/case-cinematografiche', (req, res) => {
-  res.send(caseCinematografiche);
-})
+app.get('/case-cinematografiche', cCGet)
 
-app.get('/case-cinematografiche/ricerca/:termine', (req, res) => {
-  const caseFiltrate = []
-  /*
-  a partire da un array di oggetti dobbiamo prendere il termine 
-  Usiamo un for per ciclare sull'array di oggetti 
-  */
-  for (let i = 0; i < caseCinematografiche.length; i++) {
-    if (caseCinematografiche[i].nome.includes(req.params.termine)) {
-      caseFiltrate.push(caseCinematografiche[i])
-    }
-  }
-  res.send(caseFiltrate);
-})
+app.get('/case-cinematografiche/ricerca/:termine', cCRicerca)
 
-app.get('/case-cinematografiche/:id', (req, res) => {
-  for (let i = 0; i < caseCinematografiche.length; i++) {
-    if (caseCinematografiche[i].id == req.params.id) {
-      res.send(caseCinematografiche[i]);
-      return
-    }
-  }
-  res.status(404).end()
-})
+app.get('/case-cinematografiche/:id', cCGetId)
 
-app.delete('/case-cinematografiche/:id', (req, res) => {
-  let index = -1
+app.delete('/case-cinematografiche/:id', cCDeleteCasa)
 
-  for (let i = 0; i < caseCinematografiche.length; i++) {
-    if (caseCinematografiche[i].id == req.params.id) {
-      index = i
-    }
-  }
-  if (index == -1) {
-    res.status(404).end()
-  } else {
-    caseCinematografiche.splice(index, 1)
-    res.status(200).end()
-  }
-})
+app.put('/case-cinematografiche/:id', cCModify)
 
-app.put('/case-cinematografiche/:id', (req, res) => {
-  for (let i = 0; i < caseCinematografiche.length; i++) {
-    if (caseCinematografiche[i].id == req.params.id) {
-      caseCinematografiche[i] = { ...caseCinematografiche[i], ...req.body }
-      res.status(200).end()
-      return
-    }
-  }
-  res.status(404).end()
-})
-
-app.post("/case-cinematografiche", (req, res) => {
-  NEXT_ID++
-  caseCinematografiche.push({ ...req.body, ...{ id: NEXT_ID } })
-  res.status(200).end()
-
-  res.status(400).end()
-})
+app.post("/case-cinematografiche", cCPost)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
