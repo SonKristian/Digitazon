@@ -1,0 +1,202 @@
+[
+  {
+    "nome": "Zlatan Ibrahimovic",
+    "ruolo": "Attaccante",
+    "squadra_id": 1
+  },
+  {
+    "nome": "Mike Maignan",
+    "ruolo": "Portiere",
+    "squadra_id": 1
+  },
+  {
+    "nome": "Romelu Lukaku",
+    "ruolo": "Attaccante",
+    "squadra_id": 2
+  },
+  {
+    "nome": "Samir Handanovic",
+    "ruolo": "Portiere",
+    "squadra_id": 2
+  },
+  {
+    "nome": "Dusan Vlahovic",
+    "ruolo": "Attaccante",
+    "squadra_id": 3
+  },
+  {
+    "nome": "Ángel Di María",
+    "ruolo": "Attaccante",
+    "squadra_id": 3
+  },
+  {
+    "nome": "Victor Oshimen",
+    "ruolo": "Attaccante",
+    "squadra_id": 4
+  },
+  {
+    "nome": "Hirving Lozano",
+    "ruolo": "Attaccante",
+    "squadra_id": 4
+  },
+  {
+    "nome": "Dusan Vlahovic",
+    "ruolo": "Attaccante",
+    "squadra_id": 5
+  },
+  {
+    "nome": "Ángel Di María",
+    "ruolo": "Attaccante",
+    "squadra_id": 5
+  },
+  {
+    "nome": "Lorenzo Pellegrini",
+    "ruolo": "Centrocampista",
+    "squadra_id": 6
+  },
+  {
+    "nome": "Nemanja Matic",
+    "ruolo": "Centrocampista",
+    "squadra_id": 6
+  },
+  {
+    "nome": "Ciro Immobile",
+    "ruolo": "Attaccante",
+    "squadra_id": 7
+  },
+  {
+    "nome": "Mattia Zaccagni",
+    "ruolo": "Attaccante",
+    "squadra_id": 7
+  },
+  {
+    "nome": "Domenico Berardi",
+    "ruolo": "Attaccante",
+    "squadra_id": 8
+  },
+  {
+    "nome": "Nadir Zortea",
+    "ruolo": "Difensore",
+    "squadra_id": 8
+  },
+  {
+    "nome": "Fabio Quagliarella",
+    "ruolo": "Attaccante",
+    "squadra_id": 9
+  },
+  {
+    "nome": "Martin Turk",
+    "ruolo": "Portiere",
+    "squadra_id": 9
+  },
+  {
+    "nome": "Nicolas Gonzales",
+    "ruolo": "Attaccante",
+    "squadra_id": 10
+  },
+  {
+    "nome": "Lucas Martinez",
+    "ruolo": "Difensore",
+    "squadra_id": 10
+  },
+  {
+    "nome": "Aramu Mattia",
+    "ruolo": "Attaccante",
+    "squadra_id": 11
+  },
+  {
+    "nome": "Agostino Giuseppe",
+    "ruolo": "Portiere",
+    "squadra_id": 11
+  },
+  {
+    "nome": "Marko Arnautović",
+    "ruolo": "Attaccante",
+    "squadra_id": 12
+  },
+  {
+    "nome": "Lewis Ferguson",
+    "ruolo": "Centrocampista",
+    "squadra_id": 12
+  },
+  {
+    "nome": "Beto Betuncal",
+    "ruolo": "Attaccante",
+    "squadra_id": 13
+  },
+  {
+    "nome": "Florian Thauvin",
+    "ruolo": "Centrocampista",
+    "squadra_id": 13
+  },
+  {
+    "nome": "Gianluca Lapadula",
+    "ruolo": "Attaccante",
+    "squadra_id": 14
+  },
+  {
+    "nome": "Nahitan Nández",
+    "ruolo": "Centrocampista",
+    "squadra_id": 14
+  },
+  {
+    "nome": "Miguel Veloso",
+    "ruolo": "Centrocampista",
+    "squadra_id": 15
+  },
+  {
+    "nome": "Davide Faraoni",
+    "ruolo": "Difensore",
+    "squadra_id": 15
+  },
+  {
+    "nome": "Bartłomiej Drągowski",
+    "ruolo": "Portiere",
+    "squadra_id": 16
+  },
+  {
+    "nome": "Daniel Maldini",
+    "ruolo": "Attaccante",
+    "squadra_id": 16
+  },
+  {
+    "nome": "Valentin Lazaro",
+    "ruolo": "Difensore",
+    "squadra_id": 17
+  },
+  {
+    "nome": "Antonio Sanabria",
+    "ruolo": "Attaccante",
+    "squadra_id": 17
+  },  
+  {
+    "nome": "Liam Henderson",
+    "ruolo": "Centrocampista",
+    "squadra_id": 18
+  },
+  {
+    "nome": "Francesco Caputo",
+    "ruolo": "Attaccante",
+    "squadra_id": 18
+  },
+{
+    "nome": "Joel Pohjanpalo",
+    "ruolo": "Attaccante",
+    "squadra_id": 19
+  },
+  {
+    "nome": "Denis Čeryšev",
+    "ruolo": "Centrocampista",
+    "squadra_id": 19
+  },
+  {
+    "nome": "Antonio Candreva",
+    "ruolo": "Attaccante",
+    "squadra_id": 20
+  },
+  {
+    "nome": "Boulaye Dia",
+    "ruolo": "Attaccante",
+    "squadra_id": 20
+  }
+]

@@ -1,0 +1,122 @@
+[
+      {
+        "id": 1,
+        "squadra": "AC Milan",
+        "allenatore": "Stefano Pioli",
+        "città": "Milano"
+      },
+      {
+        "id": 2,
+        "squadra": "Inter",
+        "allenatore": "Simone Inzaghi",
+        "città": "Milano"
+      },
+      {
+        "id": 3,
+        "squadra": "Juventus",
+        "allenatore": "Massimiliano Allegri",
+        "città": "Torino"
+      },
+      {
+        "id": 4,
+        "squadra": "Napoli",
+        "allenatore": "Luciano Spalletti",
+        "città": "Napoli"
+      },
+      {
+        "id": 5,
+        "squadra": "Atalanta",
+        "allenatore": "Gian Piero Gasperini",
+        "città": "Bergamo"
+      },
+      {
+        "id": 6,
+        "squadra": "Roma",
+        "allenatore": "José Mourinho",
+        "città": "Roma"
+      },
+      {
+        "id": 7,
+        "squadra": "Lazio",
+        "allenatore": "Maurizio Sarri",
+        "città": "Roma"
+      },
+      {
+        "id": 8,
+        "squadra": "Sassuolo",
+        "allenatore": "Roberto De Zerbi",
+        "città": "Sassuolo"
+      },
+      {
+        "id": 9,
+        "squadra": "Sampdoria",
+        "allenatore": "Roberto D'Aversa",
+        "città": "Genova"
+      },
+      {
+        "id": 10,
+        "squadra": "Fiorentina",
+        "allenatore": "Vincenzo Italiano",
+        "città": "Firenze"
+      },
+      {
+        "id": 11,
+        "squadra": "Genoa",
+        "allenatore": "Luca D'Agostino",
+        "città": "Genova"
+      },
+      {
+        "id": 12,
+        "squadra": "Bologna",
+        "allenatore": "Siniša Mihajlović",
+        "città": "Bologna"
+      },
+      {
+        "id": 13,
+        "squadra": "Udinese",
+        "allenatore": "Luigi Delneri",
+        "città": "Udine"
+      },
+      {
+        "id": 14,
+        "squadra": "Cagliari",
+        "allenatore": "Eusebio Di Francesco",
+        "città": "Cagliari"
+      },
+      {
+        "id": 15,
+        "squadra": "Hellas Verona",
+        "allenatore": "Ivan Jurić",
+        "città": "Verona"
+      },
+      {
+        "id": 16,
+        "squadra": "Spezia",
+        "allenatore": "Thiago Motta",
+        "città": "La Spezia"
+      },
+      {
+        "id": 17,
+        "squadra": "Torino",
+        "allenatore": "Gabriele Notonica",
+        "città": "Torino"
+      },
+      {
+        "id": 18,
+        "squadra": "Empoli",
+        "allenatore": "Alessio Dionisi",
+        "città": "Empoli"
+      },
+      {
+        "id": 19,
+        "squadra": "Venezia",
+        "allenatore": "Paolo Zanetti",
+        "città": "Venezia"
+      },
+      {
+        "id": 20,
+        "squadra": "Salernitana",
+        "allenatore": "Fabrizio Castori",
+        "città": "Salerno"
+      }
+    ]
