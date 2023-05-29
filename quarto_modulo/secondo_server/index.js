@@ -18,6 +18,8 @@ const port = 3000
 
 app.get('/', hello)
 
+/* crud sulle squadre */
+
 app.get('/case-cinematografiche', cCGet)
 app.get('/case-cinematografiche/ricerca/:termine', cCResearch)
 app.get('/case-cinematografiche/:id', cCGetId)
@@ -27,6 +29,8 @@ app.delete('/case-cinematografiche/:id', cCDelete)
 app.put('/case-cinematografiche/:id', cCModify)
 
 app.post("/case-cinematografiche", cCPost)
+
+/* crud sui film */
 
 app.get('/case-cinematografiche/:id/films', cCFilms)
 app.get('/films', fFGet)
