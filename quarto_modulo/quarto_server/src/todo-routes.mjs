@@ -1,7 +1,5 @@
 // NOTICE
 // lots of duplication, wont refactor
-
-
 import fs from 'node:fs/promises'
 import todos from '../db/todos.json' assert { type: 'json' }
 import todoUsers from '../db/todos-users.json' assert { type: 'json' }
