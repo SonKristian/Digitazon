@@ -3,9 +3,9 @@ import session from 'express-session'
 const app = express()
 const port = 3000
 app.use(session({
-  secret: 'secret',
-  resave: false,
-  saveUninitialized: true,
+  secret: 'secret',  // Chiave segreta utilizzata per firmare il cookie dell'ID della sessione
+  resave: false, // Forza il salvataggio della sessione nel negozio di sessioni, anche se non è stata modificata
+  saveUninitialized: true, // Forza il salvataggio di una sessione non inizializzata nel negozio di sessioni
   cookie: { maxAge: 60000 }
 }))
 
@@ -24,7 +24,8 @@ app.put('/users/:id', user.update)
 app.delete('/users/:id', user.remove)
 app.post('/users', user.create)
 app.post('/register', user.register)
-// app.get('/login', user.login)
+app.get('/login', user.login)
+app.get(`/session`, user.session)
 
 app.get('/todos', todo.getAll)
 app.get('/todos/search', todo.search)
