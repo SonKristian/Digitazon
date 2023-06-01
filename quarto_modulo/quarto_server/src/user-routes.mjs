@@ -1,10 +1,25 @@
 import fs from 'node:fs/promises'
 import users from '../db/users.json' assert { type: 'json' }
 import todoUsers from '../db/todos-users.json' assert { type: 'json' }
+import passUsers from '../db/passUser.json' assert { type: 'json'}
 import axios from 'axios'
 
 const DB_PATH = './db/users.json'
 const DB_PATH_TODOS_USERS = './db/todos-users.json'
+const DB_PATH_PASS = './db/passUser.json'
+
+
+export const register = async (req, res) =>{
+NEXT++
+
+passUsers[NEXT] = req.body
+await fs.writeFile(DB_PATH_PASS, JSON.stringify(passwords, null, '  '))
+res
+  .status(201)
+  .send({
+    message: 'user and password created'
+  })
+}
 
 let pass = "password"
 

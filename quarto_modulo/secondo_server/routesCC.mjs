@@ -15,9 +15,11 @@ let NEXT_ID = caseCinematografiche
 const hello = (req, res) => {
   res.send('Hello World!')
 }
+
 const cCGet = (req, res) => {
   res.send(caseCinematografiche);
 }
+
 const cCResearch = (req, res) => {
   const caseFiltrate = []
   for (let i = 0; i < caseCinematografiche.length; i++) {
