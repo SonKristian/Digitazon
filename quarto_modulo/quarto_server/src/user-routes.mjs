@@ -23,7 +23,7 @@ export const register = async (req, res) => {
   });
 };
 
-export const login = async (req, res) =>{
+export const login = (req, res) =>{
   const login = req.body;
 
   const user = Object.keys(passUsers).find(
@@ -42,10 +42,21 @@ export const login = async (req, res) =>{
   }
 }
 
-export const session = async (req, res) => {
+export const session = (req, res) => {
+// // const currentTime = new Date().getTime();
+// // const cookieExpires = new Date(req.session.cookie.expires).getTime();
     if(req.session.logged){
-    res.send("funziona")
-    }
+// //         if (cookieExpires && currentTime > cookieExpires) {
+// //           console.log('Session cookie has expired');
+// //           res.status(200).send({
+// //             message : "Scaduto tempo"
+// //           })
+// //       }
+res.status(200).send({
+  message : "funziona"
+})
+}
+
 }
 
 export const create = async (req, res) => {
