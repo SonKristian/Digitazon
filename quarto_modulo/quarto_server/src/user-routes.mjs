@@ -8,8 +8,14 @@ const DB_PATH = "./db/users.json";
 const DB_PATH_TODOS_USERS = "./db/todos-users.json";
 const DB_PATH_PASS = "./db/passUser.json";
 
-let NEXT = Object.keys(users).reduce((biggest, id) => biggest > parseInt(id, 10) ? biggest :  parseInt(id, 10),  0)
-let NEXT_USER = Object.keys(passUsers).reduce((biggest, id) => biggest > parseInt(id , 10 )? biggest :  parseInt(id, 10),  0)
+let NEXT = Object.keys(users).reduce(
+  (biggest, id) => (biggest > parseInt(id, 10) ? biggest : parseInt(id, 10)),
+  0
+);
+let NEXT_USER = Object.keys(passUsers).reduce(
+  (biggest, id) => (biggest > parseInt(id, 10) ? biggest : parseInt(id, 10)),
+  0
+);
 
 let pass = "password";
 
@@ -23,41 +29,36 @@ export const register = async (req, res) => {
   });
 };
 
-export const login = (req, res) =>{
+export const login = (req, res) => {
   const login = req.body;
 
   const user = Object.keys(passUsers).find(
     (user) =>
-    passUsers[user].username === login.username && passUsers[user].password === login.password
-    )
-  if(user){
-  req.session.user = user
-  req.session.logged = true
-  res.send(user)
-  res.redirect(`/session`)
+      passUsers[user].username === login.username &&
+      passUsers[user].password === login.password
+  );
+  if (user) {
+    req.session.user = user;
+    req.session.logged = true;
+    res.redirect(`/session`);
   } else {
     res.status(401).send({
-      message : "Gabriele attento a ciò che scrivi"
-    })
+      message: "Gabriele attento a ciò che scrivi",
+    });
   }
-}
+};
 
 export const session = (req, res) => {
-// // const currentTime = new Date().getTime();
-// // const cookieExpires = new Date(req.session.cookie.expires).getTime();
-    if(req.session.logged){
-// //         if (cookieExpires && currentTime > cookieExpires) {
-// //           console.log('Session cookie has expired');
-// //           res.status(200).send({
-// //             message : "Scaduto tempo"
-// //           })
-// //       }
-res.status(200).send({
-  message : "funziona"
-})
-}
-
-}
+  if (req.session.logged) {
+    res.status(200).send({
+      message: "funziona",
+    });
+  } else {
+    res.status(401).send({
+      message: "Terzo scudetto",
+    });
+  }
+};
 
 export const create = async (req, res) => {
   NEXT++;
