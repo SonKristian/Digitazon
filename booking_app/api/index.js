@@ -1,6 +1,11 @@
 import express from "express"
 import dotenv from "dotenv"
 import mongoose from "mongoose"
+import authRoute from "./routes/auth.js"
+import hotelsRoute from "./routes/hotels.js"
+import usersRoute from "./routes/users.js"
+import roomsRoute from "./routes/rooms.js"
+
 const app = express()
 dotenv.config()
 
@@ -17,6 +22,19 @@ try{
 mongoose.connection.on("disconnected", () => {
     console.log("mongoDB disconnected")
 })
+
+//middlewares
+
+app.use(express.json())
+
+app.use("/api/auth", authRoute)
+app.use("/api/hotels", hotelsRoute)
+app.use("/api/rooms", usersRoute)
+app.use("/api/users", roomsRoute)
+
+// app.get("/", (req, res)=>{
+//     res.send("hello first request")
+// })
 
 app.listen(8800, ()=>{
     connect()
