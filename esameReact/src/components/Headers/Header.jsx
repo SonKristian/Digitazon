@@ -1,8 +1,20 @@
 import HeaderDown from "./HeaderDown"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Searchbar from "./SearchBar";
 
-const Header = ({Search}) => {
+const Header = () => {
+  async function searchProducts(searchContent) { 
+  const response = await fetch(
+    `https://dummyjson.com/products/search?q=${searchContent}` 
+  );
+  const data = await response.json(); 
+  console.log(data.products)
+  return data.products; 
+}
+
+async function handleSearch() {  
+  const products = await searchProducts(search); 
+  // Search(products);
+}
 
   return (
     <header >
@@ -12,7 +24,10 @@ const Header = ({Search}) => {
             <img src=".\src\assets\logo.png" alt="logo" className="w-[70px] m-[2rem]"/>
           </a>
             </div>
-              <Searchbar Search={Search}/>
+            <div className="search-icon-bar ">
+                <input type="search" id="searchbar" placeholder="Search for your product" className="w-[600px] rounded-s-lg h-[40px] m-[0.4rem]"  onChange={(e) => setSearch(e.target.value)} />
+                <button className="btn-container" type="button" onClick={handleSearch}><SearchIcon /></button>
+            </div>
               <div className="form">
           <a href="login.html">
             <button className="btn-container-form" type="button">Login</button>
@@ -25,7 +40,6 @@ const Header = ({Search}) => {
         <button className="btn-container" type="button"><ShoppingCartIcon /></button>
         </div>
         </nav>
-       
         <HeaderDown />
     </header>
 
