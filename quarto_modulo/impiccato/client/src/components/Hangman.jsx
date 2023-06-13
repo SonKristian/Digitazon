@@ -1,4 +1,22 @@
 const Hangman = () => {
+        let fail=0
+        let input ='s'
+        const word = ('presse').split('')
+        let cens = ('__').split('')
+        if (word.includes(input)) {
+        for (let i = 0; i < word.length; i++) {
+            if (word[i]==input) {
+                cens[i]=word[i]
+                console.log(cens);
+            }
+        }
+        }
+        else {
+            fail++
+            console.log(fail);
+        }
+        
+    console.log(cens.join(''));
   return (
     <svg height="250" width="200" className="figure-container">
     {/* <!-- Rod --> */}
