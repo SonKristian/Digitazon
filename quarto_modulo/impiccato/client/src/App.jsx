@@ -1,14 +1,55 @@
 import "./App.css";
 import Hangman from "./components/Hangman";
 import { Keyboard } from "./components/Keypad";
+import { useState, useEffect } from 'react'
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [toGuess, setToGuess] = useState([]);
+  const [cens, setCens] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch('http://localhost:3001/words/random');
+        const data = await response.json();
+        setToGuess(data.word);
+        setCens(Array(data.word.length).fill('_'));
+      } catch (error) {
+        console.error('Errore nella chiamata API:', error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  const handleLetterClick = (letter) => {
+    if (toGuess.includes(letter)) {
+      const updatedCens = cens.map((element, index) =>
+        toGuess[index] === letter ? letter : element
+      );
+      setCens(updatedCens);
+    } else {
+      setCount((prevCount) => prevCount + 1);
+    }
+  };
   return (
     <>
-      <Hangman />
-      <Keyboard />
+     <Hangman count={count} />
+      <div className="word">
+        {cens.map((element, index) => (
+          <p key={index}>{element}</p>
+        ))}
+      </div>
+      <button>Nuova Parola</button>
+      <Keyboard onLetterClick={handleLetterClick} />
     </>
   );
 }
 
 export default App;
+
+
+// serve un bottone che prende nuova parola
+// serve funzione che fornisce punti quando indovini la parola
+// limite di errori alla parola

@@ -1,12 +1,11 @@
-
-export const Keyboard = () => {
-    const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+export const Keyboard = ({ onLetterClick }) => {
+  const letters = 'abcdefghijklmnopqrstuvwxyz';
   
     return (
       <div className="keyboard">
-        {letters.map((letter) => (
+        {letters.split('').map((letter) => (
             <div key={letter} className="key"> 
-            <button>{letter}</button> 
+            <button onClick={() => onLetterClick(letter)}>{letter}</button> 
             </div>
         ))}
       </div>

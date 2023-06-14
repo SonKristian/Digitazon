@@ -10,8 +10,33 @@
         "punti": 5
     },
     "2": {
-        "word": "lampada",
+        "word": "pecora",
+        "completed": false,
+        "punti": 5
+    },
+    "3": {
+        "word": "alberto",
+        "completed": false,
+        "punti": 5
+    },
+    "4": {
+        "word": "dio",
+        "completed": false,
+        "punti": 5
+    },
+    "5": {
+        "word": "maiale",
+        "completed": false,
+        "punti": 5
+    },
+    "6": {
+        "word": "Crocifisso",
+        "completed": false,
+        "punti": 5
+    },
+    "7": {
+        "word": "Roma",
         "completed": false,
         "punti": 5
     }
-  }
+}

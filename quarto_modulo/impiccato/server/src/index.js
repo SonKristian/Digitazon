@@ -1,9 +1,10 @@
 import express from "express"
 import session from 'express-session'
+import cors from "cors";
 import * as parola from "./wordsRoutes.mjs";
-import * as lettera from "./letterRoutes.mjs";
 const app = express();
 const port = 3001;
+app.use(cors())
 app.use(express.json());
 app.use(session({
     secret: 'keyboard cat',
@@ -14,8 +15,6 @@ app.use(session({
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })
-
-app.get("/letters", lettera.getAllletters)
 
 app.get("/words", parola.getAllWords);
 app.get("/words/random", parola.getRandomWords)
