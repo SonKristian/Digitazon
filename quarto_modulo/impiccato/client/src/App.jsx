@@ -2,6 +2,7 @@ import "./App.css";
 import Hangman from "./components/Hangman";
 import { Keyboard } from "./components/Keypad";
 import { useState, useEffect } from 'react'
+import NewWord from "./components/NewWord";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -41,7 +42,7 @@ function App() {
           <p key={index}>{element}</p>
         ))}
       </div>
-      <button>Nuova Parola</button>
+      {/* <NewWord onClick={handleNewWordClick} /> */}
       <Keyboard onLetterClick={handleLetterClick} />
     </>
   );
