@@ -1,0 +1,63 @@
+{
+  "0": {
+    "nome": "Album fotografico",
+    "fotografie": [
+      "1",
+      "2",
+      "3"
+    ],
+    "hashtags": [
+      "#mare",
+      "#studioghibli",
+      "#lisp"
+    ],
+    "data_creazione": "2022-01-01 12:00:00",
+    "data_modifica": "2022-01-02 09:30:00"
+  },
+  "1": {
+    "nome": "Album Pazzo",
+    "fotografie": [
+      "1",
+      "2",
+      "3"
+    ],
+    "hashtags": [
+      "#mare",
+      "#studioghibli",
+      "#lisp"
+    ],
+    "data_creazione": "2022-01-01 12:00:00",
+    "data_modifica": "2022-01-02 09:30:00"
+  },
+  "2": {
+    "nome": "Album Mare sensazionale",
+    "fotografie": [
+      "1",
+      "2",
+      "3"
+    ],
+    "hashtags": [
+      "#mare",
+      "#studioghibli",
+      "#lisp",
+      "sensational"
+    ],
+    "data_creazione": "2022-01-01 12:00:00",
+    "data_modifica": "2022-01-02 09:30:00"
+  },
+  "3": {
+    "nome": "Album pazzo assurdo",
+    "fotografie": [
+      "1",
+      "2",
+      "3"
+    ],
+    "hashtags": [
+      "#mare",
+      "#studioghibli",
+      "#lisp"
+    ],
+    "data_creazione": "2023-06-16T11:58:34",
+    "data_modifica": "2022-01-02 09:30:00"
+  }
+}
