@@ -11,13 +11,13 @@ const Header = () => {
   return data.products; 
 }
 
-async function handleSearch() {  
-  const products = await searchProducts(search); 
-  // Search(products);
-}
+// async function handleSearch() {  
+//   const products = await searchProducts(search); 
+//   // Search(products);
+// }
 
   return (
-    <header >
+    <header>
         <nav className="bg-slate-950">
             <div className="flex items-center">
             <a href="https://www.amazon.it">
@@ -26,7 +26,7 @@ async function handleSearch() {
             </div>
             <div className="search-icon-bar ">
                 <input type="search" id="searchbar" placeholder="Search for your product" className="w-[600px] rounded-s-lg h-[40px] m-[0.4rem]"  onChange={(e) => setSearch(e.target.value)} />
-                <button className="btn-container" type="button" onClick={handleSearch}><SearchIcon /></button>
+                <button className="btn-container" type="button" ></button>
             </div>
               <div className="form">
           <a href="login.html">
