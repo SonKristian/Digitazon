@@ -11,7 +11,18 @@
 // ad esempio per 0 ritorna []
 // ad esempio per -1 ritorna []
 
-
 function createRandomSortedArray(n) {
-    
-}
+    const arr = [];
+  
+    for (let i = 0; i < n; i++) {
+      const randomNumber = Math.random();
+      arr.push(randomNumber);
+    }
+  
+    arr.sort((a, b) => a - b); // Ordina l'array in modo crescente
+  
+    return arr;
+  }
+  
+  console.log(createRandomSortedArray(3));
+  
