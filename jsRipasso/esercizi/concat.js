@@ -7,8 +7,8 @@
 // ad esempio: con [1, 2, 3, 4] ritornerebbe [1, 2, 3, 4]
 // ad esempio: con [1, 2, 3] [1, 2] [3] ritornerebbe [1, 2, 3, 1, 2, 3]
 
-function concatAll(...array) {
-    return array.reduce((corr, arr) => corr.concat(arr), [])
-   }
-   
-   console.log(concatAll([1,2], [3, 4], [5, 6]))
+function concatAll (...arrays){
+    return arrays.reduce((arr, corr) => arr.concat(corr, []))
+}
+
+console.log(concatAll([1,2], [3,4], [5,6]))
