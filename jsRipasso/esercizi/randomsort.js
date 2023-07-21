@@ -18,7 +18,7 @@ function createRandomSortedArray(n) {
       const randomNumber = Math.random();
       arr.push(randomNumber);
     }
-  
+    // console.log(arr);
     arr.sort((a, b) => a - b); // Ordina l'array in modo crescente
   
     return arr;
